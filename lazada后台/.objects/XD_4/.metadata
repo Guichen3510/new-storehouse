@@ -1,0 +1,12 @@
+﻿{
+  "Id": "XD_4J2SliEKY9klbwD8cOQ",
+  "Reference": "J9Q2hHSqpECKD_cLXFnFmQ/XD_4J2SliEKY9klbwD8cOQ",
+  "Name": "新应用程序",
+  "Description": "12",
+  "Type": "App",
+  "Created": "2022-10-07T06:45:09.0709567Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-10-07T06:45:09.0709567Z"
+}

@@ -1,0 +1,12 @@
+﻿{
+  "Id": "iRsWiazwhkukRZHUYaqTJA",
+  "Reference": "J9Q2hHSqpECKD_cLXFnFmQ/iRsWiazwhkukRZHUYaqTJA",
+  "ParentRef": "J9Q2hHSqpECKD_cLXFnFmQ/ekmnVREQ9Ui1Ovi5AHtu9Q",
+  "Name": "新屏幕",
+  "Type": "Screen",
+  "Created": "2022-10-07T06:45:10.4482104Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.4.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-10-07T06:45:10.4482104Z"
+}

@@ -1,7 +1,7 @@
 {
   "name": "lazada后台",
   "description": "空白流程",
-  "main": "Main.xaml",
+  "main": "lazada后台登入-单站点Excel导出_新UI.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Mail.Activities": "[1.15.2]",
@@ -47,6 +47,12 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "c85146f1-dd7d-487c-887c-e75cd35b5426",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "lazada后台登入-单站点Excel导出_新UI.xaml",
+      "uniqueId": "7b06301c-c18f-43a2-9145-460a6b97b3f9",
       "input": [],
       "output": []
     }
