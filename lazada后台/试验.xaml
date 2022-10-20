@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="试验" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1207,2261" sap2010:WorkflowViewState.IdRef="试验_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="试验" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1165,640" sap2010:WorkflowViewState.IdRef="试验_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="30">
+    <scg:List x:TypeArguments="x:String" Capacity="33">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -22,19 +22,22 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
-      <x:String>UiPath.Excel</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
       <x:String>System.Reflection</x:String>
       <x:String>System.Runtime.InteropServices</x:String>
-      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
       <x:String>System.Runtime.Serialization</x:String>
-      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -56,68 +59,56 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="试验" sap:VirtualizedContainerService.HintSize="476,2196" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="试验" sap:VirtualizedContainerService.HintSize="554,575" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="ui:WorkbookApplication" Name="excel" />
+      <Variable x:TypeArguments="ui:WorkbookApplication" Name="hong" />
+      <Variable x:TypeArguments="x:String" Name="a" />
+      <Variable x:TypeArguments="s:String[]" Name="doc_directory" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel 应用程序范围" sap:VirtualizedContainerService.HintSize="434,2104" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Workbook="[excel]" WorkbookPath="D:\电子商务\Lazada\店铺数据\lazada单站点stock&amp;price excel下载 中转\pricestock500158074442export1660546401380_0815-14-53-21 - 副本.xlsx">
-      <ui:ExcelApplicationScope.Body>
-        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+    <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="512,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[doc_directory]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("D:\电子商务\Lazada\店铺数据\lazada单站点stock&amp;price excel下载 中转")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="遍历循环" sap:VirtualizedContainerService.HintSize="512,382" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[doc_directory]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+            <DelegateInArgument x:TypeArguments="x:String" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="376,1995" sap2010:WorkflowViewState.IdRef="Sequence_2">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:Double" Name="k10" />
-              <Variable x:TypeArguments="x:Int32" Name="nr" />
-              <Variable x:TypeArguments="sd:DataTable" Name="Dt" />
-            </Sequence.Variables>
+          <Sequence DisplayName="正文" sap:VirtualizedContainerService.HintSize="476,255" sap2010:WorkflowViewState.IdRef="Sequence_6">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[Dt]" DisplayName="读取范围" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="template">
-              <ui:ExcelReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ExcelReadRange.Range>
-            </ui:ExcelReadRange>
-            <ui:ExcelInsertDeleteColumns DisplayName="插入/删除列" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteColumns_1" Mode="Add" NoColumns="1" Position="12" SheetName="template" />
-            <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_1">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Int32">[nr]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[Dt.Rows.Count()+1]</InArgument>
-              </Assign.Value>
-            </Assign>
-            <ui:LogMessage DisplayName="日志消息" sap:VirtualizedContainerService.HintSize="334,95" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[nr]" />
-            <ui:ExcelCopyPasteRange CopyItems="Value" DestinationCell="[&quot;L5:L&quot;+nr.ToString]" DestinationSheet="template" DisplayName="复制/粘贴范围" sap:VirtualizedContainerService.HintSize="334,246" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_1" SheetName="template" SourceRange="[&quot;K5:K&quot;+nr.ToString]" />
-            <ui:ExcelWriteCell Cell="[&quot;L5:L&quot;+nr.ToString]" DisplayName="写入单元格" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="template" Text="=K5-1" />
-            <ui:ExcelCopyPasteRange CopyItems="Value" DestinationCell="[&quot;L5:L&quot;+nr.ToString]" DestinationSheet="template" DisplayName="复制/粘贴范围" sap:VirtualizedContainerService.HintSize="334,246" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_2" SheetName="template" SourceRange="[&quot;L5:L&quot;+nr.ToString]" />
-            <ui:ExcelCopyPasteRange CopyItems="Value" DestinationCell="[&quot;K5:K&quot;+nr.ToString]" DestinationSheet="template" DisplayName="复制/粘贴范围" sap:VirtualizedContainerService.HintSize="334,246" sap2010:WorkflowViewState.IdRef="ExcelCopyPasteRange_3" SheetName="template" SourceRange="[&quot;L5:L&quot;+nr.ToString]" />
-            <ui:ExcelInsertDeleteColumns DisplayName="插入/删除列" sap:VirtualizedContainerService.HintSize="334,191" sap2010:WorkflowViewState.IdRef="ExcelInsertDeleteColumns_2" Mode="Remove" NoColumns="1" Position="12" SheetName="template" />
-            <Delay DisplayName="延迟" Duration="00:00:02" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_2" />
-            <ui:ExcelCloseWorkbook DisplayName="关闭工作簿" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelCloseWorkbook_1" Workbook="[excel]" />
+            <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="D:\电子商务\Lazada\店铺数据\lazada单站点stock&amp;price excel下载 修改价格后\" DisplayName="移动文件" sap:VirtualizedContainerService.HintSize="434,163" sap2010:WorkflowViewState.IdRef="MoveFile_1" Overwrite="True" Path="[item]" />
           </Sequence>
         </ActivityAction>
-      </ui:ExcelApplicationScope.Body>
-    </ui:ExcelApplicationScope>
+      </ui:ForEach.Body>
+    </ui:ForEach>
   </Sequence>
 </Activity>
