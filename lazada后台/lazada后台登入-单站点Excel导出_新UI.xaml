@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="lazada后台登入_单站点Excel导出_新UI" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1122,19286" sap2010:WorkflowViewState.IdRef="lazada后台登入_单站点Excel导出_新UI_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="lazada后台登入_单站点Excel导出_新UI" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1186,2234" sap2010:WorkflowViewState.IdRef="lazada后台登入_单站点Excel导出_新UI_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
       <x:String>System.Activities</x:String>
@@ -87,7 +87,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="lazada后台登入_单站点Excel导出_新UI" sap:VirtualizedContainerService.HintSize="1132,19221" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="lazada后台登入_单站点Excel导出_新UI" sap:VirtualizedContainerService.HintSize="859,2169" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Dt" />
       <Variable x:TypeArguments="x:String" Name="row" />
@@ -99,7 +99,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel 应用程序范围" sap:VirtualizedContainerService.HintSize="1090,260" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="D:\电子商务\Lazada\Zhang H - PAD使用.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel 应用程序范围" sap:VirtualizedContainerService.HintSize="817,260" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="D:\电子商务\Lazada\Zhang H - PAD使用.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -122,12 +122,12 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:InputDialog Options="{x:Null}" DisplayName="输入对话框" sap:VirtualizedContainerService.HintSize="1090,301" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="亲输入站点英文简写:" OptionsString="MY;PH;SG;TH;VN" Title="输入站点：（MY,PH,SG,TH,VN）">
+    <ui:InputDialog Options="{x:Null}" DisplayName="输入对话框" sap:VirtualizedContainerService.HintSize="817,301" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="亲输入站点英文简写:" OptionsString="MY;PH;SG;TH;VN" Title="输入站点：（MY,PH,SG,TH,VN）">
       <ui:InputDialog.Result>
         <OutArgument x:TypeArguments="x:String">[site]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
-    <Switch x:TypeArguments="x:String" DisplayName="切换" Expression="[site]" sap:VirtualizedContainerService.HintSize="1090,241" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+    <Switch x:TypeArguments="x:String" DisplayName="切换" Expression="[site]" sap:VirtualizedContainerService.HintSize="817,241" sap2010:WorkflowViewState.IdRef="Switch`1_1">
       <Assign x:Key="MY" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_21">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[WebSite]</OutArgument>
@@ -169,13 +169,13 @@
         </Assign.Value>
       </Assign>
     </Switch>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt]" DisplayName="对于数据表中的每一行" sap:VirtualizedContainerService.HintSize="1090,18207" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt]" DisplayName="对于数据表中的每一行" sap:VirtualizedContainerService.HintSize="817,1155" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="正文" sap:VirtualizedContainerService.HintSize="1056,18089" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="正文" sap:VirtualizedContainerService.HintSize="783,1037" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <Sequence.Variables>
               <Variable x:TypeArguments="ui:UiElement" Name="Edge" />
             </Sequence.Variables>
@@ -184,13 +184,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <TryCatch DisplayName="Try Catch 异常处理" sap:VirtualizedContainerService.HintSize="1014,17997" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+            <TryCatch DisplayName="Try Catch 异常处理" sap:VirtualizedContainerService.HintSize="741,945" sap2010:WorkflowViewState.IdRef="TryCatch_2">
               <TryCatch.Variables>
                 <Variable x:TypeArguments="x:String" Name="exception" />
                 <Variable x:TypeArguments="s:Exception" Name="ProcessError" />
               </TryCatch.Variables>
               <TryCatch.Try>
-                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="使用浏览器 Edge: Seller Center" sap:VirtualizedContainerService.HintSize="976,17712" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[Edge]" ScopeGuid="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V2">
+                <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="使用浏览器 Edge: Seller Center" sap:VirtualizedContainerService.HintSize="976,17742" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OutUiElement="[Edge]" ScopeGuid="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V2">
                   <uix:NApplicationCard.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -1466,7 +1466,7 @@
                 </uix:NApplicationCard>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="980,23" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="707,23" sap2010:WorkflowViewState.IdRef="Catch`1_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1495,7 +1495,7 @@
                     </Sequence>
                   </ActivityAction>
                 </Catch>
-                <Catch x:TypeArguments="ui:ElementOperationException" sap:VirtualizedContainerService.HintSize="980,23" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                <Catch x:TypeArguments="ui:ElementOperationException" sap:VirtualizedContainerService.HintSize="707,23" sap2010:WorkflowViewState.IdRef="Catch`1_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1525,7 +1525,7 @@
                     </Sequence>
                   </ActivityAction>
                 </Catch>
-                <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="980,23" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                <Catch x:TypeArguments="ui:SelectorNotFoundException" sap:VirtualizedContainerService.HintSize="707,23" sap2010:WorkflowViewState.IdRef="Catch`1_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1567,7 +1567,7 @@
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="942,17494" sap2010:WorkflowViewState.IdRef="Sequence_173">
+                            <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="942,18411" sap2010:WorkflowViewState.IdRef="Sequence_173">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="Var" />
                                 <Variable x:TypeArguments="x:String" Name="sum" />
@@ -2097,7 +2097,7 @@
                                   <uix:TargetAnchorable BrowserURL="https://sellercenter.lazada.com.my/apps/product/list?__ARMS_PID__=giiryrcz16%40b0032fa5beed9d8&amp;tab=online_product&amp;userId=300166869125" DesignTimeRectangle="1293, 598, 82, 17" ElementType="Text" FriendlyName="'First Updated'" FullSelectorArgument="&lt;webctrl aaname='First Updated' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='First Updated' tag='SPAN' type='' class='next-menu-item-text' check:innerText='First Updated' /&gt;" Guid="d847958e-5342-4910-8640-8a62d0eaa49c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAVCAYAAADcmhk1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAM6SURBVFhH7Zbfa9pQFMf3H/qkDxNGoSAEQagFOygZWIp0tELLaCEggpiHdbSswkSKgynMFUpBQguTgi9WsBSxtEiLInx3fyVLYmbaNdlayAcCntxz77nn68m95xUCfCEQ1icCYX0iENYnTML2UF6WEIrYnzTKV8Dgawah1SoGwttLLitphHJNYenw/aQqPWE/Duc1/cEp1pSwiiZML7mqICX+ICf+u7CaQgpIwd+m/iRh2eTlCi6Z1YQSWUJ2Zx2voyL5SR8nhTSzQ5EE5tJFnPTFPNMX4CTUQ4RlPhtFqO8SCJN1wvNpqD/v2Bijf4z82wSLEV7YRn5Htqw5PNvHyoIYn5eRrfN1tdzvvdHHyP/21BIr3yTJ6LjEojxBWJL0bgvDCXuBwTdyVCyXcEHtyQ00lQTL1DCkgx5ULPOJZnDQHRNrjIsvGYSj2/hxT0e571zumO/n9hiKRITS1+zuI07iH3ToXGDUKVn3Y6/YSRufFpNEfCFml/hHZRKbGi6xBK5nrCUxi7BWoVpqklRUgwtpxythLT4k+YSE7BERq7OPWEQXmeO8pg4vDKOI7MISO5wqiVw5JzsSYnvtB8d6QsXahOrVsEb+uXAsg+znKlo9Xh0MX4TlnzEbp8LYhLD7D9sVZBf5p60XzZ+EZXNNfsZD13tALIp3wlImY1yeN1AurCOmn70Un4SlVWQIa+yNY/G/rkKOyMhrfYzY0TW7YtncrQZGwrbgFkvgrbAmRkfbCM0X0aKGi7CDQ3o+Wzdr+dQJ05t/xFEwJcZsYY29i/uDof/+t0fBDeobEuJqEwO6AXJ5tXeJv3553TeQJV2ESo4oR65rWImSy+J7j1cUnb9HLicpD00kwOK7XF5x9ZRfKNe2C+W8SLoVMVdf2ywsE2sTdf2CmLSQJ/PpBcXyGXdwQDqEtSPahbjEEnhXscM2ylvyVLvFGUMrLLFkUoemtsVMt4YP6SQ/A6MJxN9/NM0X8We1W7Q9MrVAao74G8neoV3irSFdO1UoQUlJWKnfiPEeqqt8rnImXtGWSt/PmyTkXSEkZWYsjknY543T5/acCYT1iUBYn3gxwr40AmF9IhDWJwJhfQH4BaHCS/oWkeSuAAAAAElFTkSuQmCC" InformativeScreenshot="4813cf53c74bf130ce523919733fbb7a.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter.lazada.com.my%2Fapps%2Fproduct%2Flist%3F__ARMS_PID__%3Dgiiryrcz16%2540b0032fa5beed9d8%26tab%3Donline_product%26userId%3D300166869125&amp;amp;refer_pv_id=3c164edfwA5MPe' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="鼠标滚动" sap:VirtualizedContainerService.HintSize="900,217" sap2010:WorkflowViewState.IdRef="NMouseScroll_4" InteractionMode="HardwareEvents" MovementUnits="10" Timeout="120" Version="V1">
+                              <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="鼠标滚动" sap:VirtualizedContainerService.HintSize="900,240" sap2010:WorkflowViewState.IdRef="NMouseScroll_4" InteractionMode="HardwareEvents" MovementUnits="10" Timeout="120" Version="V1">
                                 <uix:NMouseScroll.SearchedElement>
                                   <uix:SearchedElement>
                                     <uix:SearchedElement.Target>
@@ -2115,31 +2115,53 @@
                                   </uix:SearchedElement>
                                 </uix:NMouseScroll.SearchedElement>
                               </uix:NMouseScroll>
-                              <Delay DisplayName="延迟" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="900,22" sap2010:WorkflowViewState.IdRef="Delay_38" />
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'INPUT'" sap:VirtualizedContainerService.HintSize="900,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e6c11ed-91a3-4c0f-8134-5403c7bd7442" InformativeScreenshot="5748ca20b3761a498af5d92753a7d8b5" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                              <Delay DisplayName="延迟" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="900,22" sap2010:WorkflowViewState.IdRef="Delay_39" />
-                              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="键盘快捷方式" sap:VirtualizedContainerService.HintSize="900,158" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Shortcuts="[d(hk)][k(end)][u(hk)]" Version="V1" />
+                              <Delay DisplayName="延迟" Duration="00:00:04" sap:VirtualizedContainerService.HintSize="900,22" sap2010:WorkflowViewState.IdRef="Delay_38" />
+                              <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="900,192" sap2010:WorkflowViewState.IdRef="CommentOut_31">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_175">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <Delay DisplayName="延迟" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_39" />
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                              </ui:CommentOut>
+                              <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="900,276" sap2010:WorkflowViewState.IdRef="CommentOut_32">
+                                <ui:CommentOut.Body>
+                                  <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_176">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'INPUT'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0e6c11ed-91a3-4c0f-8134-5403c7bd7442" InformativeScreenshot="5748ca20b3761a498af5d92753a7d8b5" Selector="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                  </Sequence>
+                                </ui:CommentOut.Body>
+                              </ui:CommentOut>
+                              <uix:NKeyboardShortcuts DelayBetweenShortcuts="{x:Null}" ActivateBefore="True" ClickBeforeMode="None" DisplayName="键盘快捷方式" sap:VirtualizedContainerService.HintSize="900,181" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_6" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Shortcuts="[d(hk)][k(end)][u(hk)]" Version="V1" />
                               <uix:NGetText DisplayName="获取文本 '10'" sap:VirtualizedContainerService.HintSize="900,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
                                 <uix:NGetText.Target>
                                   <uix:TargetAnchorable BrowserURL="https://sellercenter.lazada.com.my/apps/product/list?__ARMS_PID__=giiryrcz16%40b0032fa5beed9d8&amp;current=5&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product&amp;userId=300166869125" DesignTimeRectangle="272, 934, 60, 17" ElementType="Text" FriendlyName="'Total 551'" FullSelectorArgument="&lt;webctrl aaname='Total 551 ' parentid='root' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='root' tag='SPAN' type='' class='next-pagination-size-selector-title' /&gt;" Guid="b8e665ee-951c-4f31-8b47-7b38e9d11650" InformativeScreenshot="83926f18d4aaaeaa22838c2f994e66f0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter.lazada.com.my%2Fapps%2Fproduct%2Flist%3F__ARMS_PID__%3Dgiiryrcz16%2540b0032fa5beed9d8%26current%3D5%26pageSize%3D50%26sort%3D%257B%2522updateDesc%2522%253A%2522asc%2522%257D%26tab%3Donline_product%26userI*' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
@@ -2188,9 +2210,9 @@
                                   <InArgument x:TypeArguments="x:Int32">[(number \ 2)+1]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <If Condition="[times&lt;=11]" DisplayName="IF 条件" sap:VirtualizedContainerService.HintSize="900,453" sap2010:WorkflowViewState.IdRef="If_3">
+                              <If Condition="[times&lt;=11]" DisplayName="IF 条件" sap:VirtualizedContainerService.HintSize="900,451" sap2010:WorkflowViewState.IdRef="If_3">
                                 <If.Then>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,189" sap2010:WorkflowViewState.IdRef="Sequence_156">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,187" sap2010:WorkflowViewState.IdRef="Sequence_156">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2200,7 +2222,7 @@
                                   </Sequence>
                                 </If.Then>
                                 <If.Else>
-                                  <Sequence sap:VirtualizedContainerService.HintSize="376,290" sap2010:WorkflowViewState.IdRef="Sequence_157">
+                                  <Sequence sap:VirtualizedContainerService.HintSize="376,288" sap2010:WorkflowViewState.IdRef="Sequence_157">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -2218,7 +2240,7 @@
                                   </Sequence>
                                 </If.Else>
                               </If>
-                              <uix:NClick ClickType="Single" DisplayName="单击 '10'" sap:VirtualizedContainerService.HintSize="900,158" sap2010:WorkflowViewState.IdRef="NClick_84" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
+                              <uix:NClick ClickType="Double" DisplayName="单击 '10'" sap:VirtualizedContainerService.HintSize="900,158" sap2010:WorkflowViewState.IdRef="NClick_84" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
                                 <uix:NClick.Target>
                                   <uix:TargetAnchorable BrowserURL="https://sellercenter-my.lazada-seller.cn/apps/product/list?current=1&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product" DesignTimeRectangle="371, 978, 16, 16" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;i' parentid='root' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='I' class='next-icon next-icon-arrow-down next-medium next-select-symbol-fold' aaname='' /&gt;" Guid="a41b3a73-dca4-4b61-b11f-95ac7db7a8b2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVDhP7dG9C4JAGMfx/vmmOAghEHQqHAKHJnEQampSSigkcFFEcI3DoRd+3VMXlHlZZJtfcPDh8cOpPbRcB/7ev8EScbBFxuVtUzyFHxR4XK+AKWaaib7mYN2E8h2s6+4csRxRr6+c+zBpUfewUaE8hq2LHWbDy+VMVv8N8yVGTDxgLJGd5ezeuYBrEDaFW8Eo5U85JjXoI5ac5PA5JUjxyMNQoGziIzsUWEzGArNgR6XceO0tSPHQARvQqcQ1GMMK1RjVCFI3VGCrvZyo+wj8pg78vZZB4AIsYBWFPcH2xwAAAABJRU5ErkJggg==" InformativeScreenshot="40c76e883f7661b306e5fd0a5ebd84b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter-my.lazada-seller.cn%2Fapps%2Fseller%2Flogin%3Fredirect_url%3Dhttps%253A%252F%252Fsellercenter-my.lazada-seller.cn%252Fapps%252Fproduct%252Flist&amp;amp;refer_pv_id=10544edf5vKihM' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
                                     <uix:TargetAnchorable.Anchors>
@@ -2229,13 +2251,58 @@
                                   </uix:TargetAnchorable>
                                 </uix:NClick.Target>
                               </uix:NClick>
-                              <uix:NClick ClickType="Single" DisplayName="单击 '50'" sap:VirtualizedContainerService.HintSize="900,158" sap2010:WorkflowViewState.IdRef="NClick_85" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
-                                <uix:NClick.Target>
-                                  <uix:TargetAnchorable BrowserURL="https://sellercenter.lazada.com.my/apps/product/list?__ARMS_PID__=giiryrcz16%40b0032fa5beed9d8&amp;current=1&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product&amp;userId=300166869125" DesignTimeRectangle="357, 892, 15, 17" ElementType="Text" FriendlyName="'50'" FullSelectorArgument="&lt;webctrl aaname='50' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='50' tag='SPAN' type='' class='next-menu-item-text' check:innerText='50' /&gt;" Guid="84bc463e-b2ba-4709-bf32-00d6e1cbcc88" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAVCAYAAACkCdXRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhP7ZIxS8NAGIb9h52SoUIpZLpFsEMcpIU6ZCkZRBwOgosOdavQkNEGbKFQKKGCWVyqEAlSaSmKofD2LnfQXGjRgIOgDxzkuy883Hvf7eEH+auywCEo6eqigWziHeG1hWpF7JcbbQQL2WLkZK9wGwRnY1nmmPktaIRixAWrOUZODZrVw0y087IIHZOd5F6WCnP4FoHpRbJmLHo40Vvw5elysjGo3oQby1Ihgnucjczh/9fRkX5V9tGHnb2vyhFs7xHLtDkB3d8m2+ypslWCl6CPIE7S8nN6A5MJ7CGvi8q2EF7VUHL4RHbF3FzLt2TaxYR9JRicEhx2MwOIPZg7B/BwibJBMXgTMfGcjcliD8+LPI0ET3cUpiEGoBl12LdT2eNkH+0Bqs02QjGdlC9jFuFfVpzfKgPWGPDW2FAY664AAAAASUVORK5CYII=" InformativeScreenshot="010bab799309be990230fdc137db9ca9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter.lazada.com.my%2Fapps%2Fproduct%2Flist%3F__ARMS_PID__%3Dgiiryrcz16%2540b0032fa5beed9d8%26tab%3Donline_product%26userId%3D300166869125&amp;amp;refer_pv_id=3c164edfwA5MPe' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
-                                </uix:NClick.Target>
-                              </uix:NClick>
+                              <uix:NCheckState Exists="{x:Null}" DisplayName="查看应用程序状态 '50'" sap:VirtualizedContainerService.HintSize="900,670" sap2010:WorkflowViewState.IdRef="NCheckState_57" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
+                                <uix:NCheckState.IfExists>
+                                  <Sequence DisplayName="目标显示" sap:VirtualizedContainerService.HintSize="376,251" sap2010:WorkflowViewState.IdRef="Sequence_177">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Single" DisplayName="单击 '50'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_85" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://sellercenter.lazada.com.my/apps/product/list?__ARMS_PID__=giiryrcz16%40b0032fa5beed9d8&amp;current=1&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product&amp;userId=300166869125" DesignTimeRectangle="357, 892, 15, 17" ElementType="Text" FriendlyName="'50'" FullSelectorArgument="&lt;webctrl aaname='50' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='50' tag='SPAN' type='' class='next-menu-item-text' check:innerText='50' /&gt;" Guid="84bc463e-b2ba-4709-bf32-00d6e1cbcc88" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAVCAYAAACkCdXRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhP7ZIxS8NAGIb9h52SoUIpZLpFsEMcpIU6ZCkZRBwOgosOdavQkNEGbKFQKKGCWVyqEAlSaSmKofD2LnfQXGjRgIOgDxzkuy883Hvf7eEH+auywCEo6eqigWziHeG1hWpF7JcbbQQL2WLkZK9wGwRnY1nmmPktaIRixAWrOUZODZrVw0y087IIHZOd5F6WCnP4FoHpRbJmLHo40Vvw5elysjGo3oQby1Ihgnucjczh/9fRkX5V9tGHnb2vyhFs7xHLtDkB3d8m2+ypslWCl6CPIE7S8nN6A5MJ7CGvi8q2EF7VUHL4RHbF3FzLt2TaxYR9JRicEhx2MwOIPZg7B/BwibJBMXgTMfGcjcliD8+LPI0ET3cUpiEGoBl12LdT2eNkH+0Bqs02QjGdlC9jFuFfVpzfKgPWGPDW2FAY664AAAAASUVORK5CYII=" InformativeScreenshot="010bab799309be990230fdc137db9ca9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter.lazada.com.my%2Fapps%2Fproduct%2Flist%3F__ARMS_PID__%3Dgiiryrcz16%2540b0032fa5beed9d8%26tab%3Donline_product%26userId%3D300166869125&amp;amp;refer_pv_id=3c164edfwA5MPe' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </uix:NCheckState.IfExists>
+                                <uix:NCheckState.IfNotExists>
+                                  <Sequence DisplayName="目标未显示" sap:VirtualizedContainerService.HintSize="376,450" sap2010:WorkflowViewState.IdRef="Sequence_178">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Double" DisplayName="单击 '10'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_106" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://sellercenter-my.lazada-seller.cn/apps/product/list?current=1&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product" DesignTimeRectangle="371, 978, 16, 16" FriendlyName="'I'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;i' parentid='root' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' parentid='root' tag='I' class='next-icon next-icon-arrow-down next-medium next-select-symbol-fold' aaname='' /&gt;" Guid="a41b3a73-dca4-4b61-b11f-95ac7db7a8b2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADaSURBVDhP7dG9C4JAGMfx/vmmOAghEHQqHAKHJnEQampSSigkcFFEcI3DoRd+3VMXlHlZZJtfcPDh8cOpPbRcB/7ev8EScbBFxuVtUzyFHxR4XK+AKWaaib7mYN2E8h2s6+4csRxRr6+c+zBpUfewUaE8hq2LHWbDy+VMVv8N8yVGTDxgLJGd5ezeuYBrEDaFW8Eo5U85JjXoI5ac5PA5JUjxyMNQoGziIzsUWEzGArNgR6XceO0tSPHQARvQqcQ1GMMK1RjVCFI3VGCrvZyo+wj8pg78vZZB4AIsYBWFPcH2xwAAAABJRU5ErkJggg==" InformativeScreenshot="40c76e883f7661b306e5fd0a5ebd84b2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter-my.lazada-seller.cn%2Fapps%2Fseller%2Flogin%3Fredirect_url%3Dhttps%253A%252F%252Fsellercenter-my.lazada-seller.cn%252Fapps%252Fproduct%252Flist&amp;amp;refer_pv_id=10544edf5vKihM' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                              <uix:Target DesignTimeRectangle="345, 971, 15, 30" FriendlyName="'10'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;section&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;em' tag='EM' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='EM' class='' aaname='10' check:innerText='10' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAiCAYAAAC9duLEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEMSURBVEhL7ZaxasMwEIb9mnoETaWQ2XsXU3CHdDCeMnSJFw/NVCjOkjTREndQKd4DJhAQAQ/+q9SHg4MdkCMIAX8gpDuJD066QQ4s4nyJbyzXqZXhlGVJ3uuxWybNVhhk5tyZrMglPiZPiH8oUVMge3+F+8jAGMfInyFTtKVpyvYSsT8CZ8fDDNGZTK1CcDeC/BcoyKkLHgi9qmjKfmO8TBfI9lskz+cyBREwePMdxRolELIQgmwdd7ZrkbXlJCLmIdlWkYEsQ8TbZKfcrWQXysyryEBWYDPRD/BJF3QkT+D1ewCtS98MWqOmXdZs2ge4Y920B9rSdMj6McjMGWTm2JVZ/bhY/VKR1ALAH5OStYQogzFmAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="单击 '50'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_107" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78182d05-4e66-4fd2-b3b8-18f7f11f6728" Version="V1">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://sellercenter.lazada.com.my/apps/product/list?__ARMS_PID__=giiryrcz16%40b0032fa5beed9d8&amp;current=1&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product&amp;userId=300166869125" DesignTimeRectangle="357, 892, 15, 17" ElementType="Text" FriendlyName="'50'" FullSelectorArgument="&lt;webctrl aaname='50' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='50' tag='SPAN' type='' class='next-menu-item-text' check:innerText='50' /&gt;" Guid="84bc463e-b2ba-4709-bf32-00d6e1cbcc88" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAVCAYAAACkCdXRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhP7ZIxS8NAGIb9h52SoUIpZLpFsEMcpIU6ZCkZRBwOgosOdavQkNEGbKFQKKGCWVyqEAlSaSmKofD2LnfQXGjRgIOgDxzkuy883Hvf7eEH+auywCEo6eqigWziHeG1hWpF7JcbbQQL2WLkZK9wGwRnY1nmmPktaIRixAWrOUZODZrVw0y087IIHZOd5F6WCnP4FoHpRbJmLHo40Vvw5elysjGo3oQby1Ihgnucjczh/9fRkX5V9tGHnb2vyhFs7xHLtDkB3d8m2+ypslWCl6CPIE7S8nN6A5MJ7CGvi8q2EF7VUHL4RHbF3FzLt2TaxYR9JRicEhx2MwOIPZg7B/BwibJBMXgTMfGcjcliD8+LPI0ET3cUpiEGoBl12LdT2eNkH+0Bqs02QjGdlC9jFuFfVpzfKgPWGPDW2FAY664AAAAASUVORK5CYII=" InformativeScreenshot="010bab799309be990230fdc137db9ca9.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter.lazada.com.my%2Fapps%2Fproduct%2Flist%3F__ARMS_PID__%3Dgiiryrcz16%2540b0032fa5beed9d8%26tab%3Donline_product%26userId%3D300166869125&amp;amp;refer_pv_id=3c164edfwA5MPe' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </uix:NCheckState.IfNotExists>
+                                <uix:NCheckState.Target>
+                                  <uix:TargetAnchorable BrowserURL="https://sellercenter-my.lazada-seller.cn/apps/product/list?current=1&amp;pageSize=10&amp;sort=%7B%22updateDesc%22%3A%22asc%22%7D&amp;tab=online_product" DesignTimeRectangle="357, 935, 15, 17" ElementType="Text" FriendlyName="'50'" FullSelectorArgument="&lt;webctrl aaname='50' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='50' tag='SPAN' type='' class='next-menu-item-text' check:innerText='50' /&gt;" Guid="3777e21e-8953-4161-af22-25b53e9f0658" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAVCAYAAACkCdXRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhP7ZIxS8NAGIb9h52SoUIpZLpFsEMcpIU6ZCkZRBwOgosOdavQkNEGbKFQKKGCWVyqEAlSaSmKofD2LnfQXGjRgIOgDxzkuy883Hvf7eEH+auywCEo6eqigWziHeG1hWpF7JcbbQQL2WLkZK9wGwRnY1nmmPktaIRixAWrOUZODZrVw0y087IIHZOd5F6WCnP4FoHpRbJmLHo40Vvw5elysjGo3oQby1Ihgnucjczh/9fRkX5V9tGHnb2vyhFs7xHLtDkB3d8m2+ypslWCl6CPIE7S8nN6A5MJ7CGvi8q2EF7VUHL4RHbF3FzLt2TaxYR9JRicEhx2MwOIPZg7B/BwibJBMXgTMfGcjcliD8+LPI0ET3cUpiEGoBl12LdT2eNkH+0Bqs02QjGdlC9jFuFfVpzfKgPWGPDW2FAY664AAAAASUVORK5CYII=" InformativeScreenshot="2c22723d22dbe3255c2f13805ac2fae8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='nameStorage:?wm_referrer=https%3A%2F%2Fsellercenter-my.lazada-seller.cn%2Fapps%2Fseller%2Flogin%3Fredirect_url%3Dhttps%253A%252F%252Fsellercenter-my.lazada-seller.cn%252Fapps%252Fproduct%252Flist&amp;amp;refer_pv_id=10544edfMXj7Qr' title='Manage Products - Seller Center' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                    <uix:TargetAnchorable.Anchors>
+                                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                        <uix:Target DesignTimeRectangle="357, 903, 15, 17" ElementType="Text" FriendlyName="'20'" FullSelectorArgument="&lt;webctrl aaname='20' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='20' tag='SPAN' type='' class='next-menu-item-text' check:innerText='20' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAVCAYAAACkCdXRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE9SURBVDhP7ZKxS8NAHIX9Dzslg4WSSTgEoQ5dSoV0uCU4iGQ4kE4OqYsODRlcmqWiFORwydLJIaVDpSVEDIXn5XJpU2yKLQ6CfpDh8pIvuXe/A/wgf1MWI7i1cFwjqOgEWt2GO4pVliLyLoWh8sMzB3yuIsGabOyZqDQdjOQDCV57FFrVxuBdxpj6FjTCMEzzxQzDq1NotI9pFhdlIdwmwflDotaCxRMudRPuJF3M4FOChhfKSDLvo61b8NXfbe/s7R6t5cPZxxiXieIZTG/hTvm3yGJwsQ3jOlDrF7DqJtnqXqls7Im+SAdc9bW3LOIMRl70krJt5p1ukEW8g6MahVvoOSPB4IKg3isEEw+N0gMIRShEN2uzteLj0f7uaEAUng3j1yvfSnFoT2CYDoJIviopPYB9+Jftzm+VAZ9QktdIGSJsXwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                      </scg:List>
+                                    </uix:TargetAnchorable.Anchors>
+                                  </uix:TargetAnchorable>
+                                </uix:NCheckState.Target>
+                              </uix:NCheckState>
                               <Delay DisplayName="延迟" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="900,22" sap2010:WorkflowViewState.IdRef="Delay_40" />
-                              <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="鼠标滚动" sap:VirtualizedContainerService.HintSize="900,217" sap2010:WorkflowViewState.IdRef="NMouseScroll_5" InteractionMode="HardwareEvents" MovementUnits="10" Timeout="120" Version="V1">
+                              <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="鼠标滚动" sap:VirtualizedContainerService.HintSize="900,240" sap2010:WorkflowViewState.IdRef="NMouseScroll_5" InteractionMode="HardwareEvents" MovementUnits="10" Timeout="120" Version="V1">
                                 <uix:NMouseScroll.SearchedElement>
                                   <uix:SearchedElement>
                                     <uix:SearchedElement.Target>

@@ -1,0 +1,74 @@
+{
+  "name": "Edge-lazada店小秘",
+  "description": "本流程：1.无产品1688链接抓取；2.无中文标题/短描述抓取。",
+  "main": "不同店小秘批量.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.12.3]",
+    "UiPath.Mail.Activities": "[1.15.2]",
+    "UiPath.System.Activities": "[22.4.4]",
+    "UiPath.UIAutomation.Activities": "[22.4.7]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.4.4.0",
+  "projectVersion": "1.0.1",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": [
+        "子流1.xaml",
+        "子流2.xaml",
+        "子流3.xaml"
+      ]
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "d99bdf96-49f1-416d-9f06-8e822acfb809",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "不同店小秘批量.xaml",
+      "uniqueId": "2d94dc73-7798-4753-84f7-e9dcf24dc92b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ocr试验.xaml",
+      "uniqueId": "519794a0-65f7-412e-8274-784c06d21daf",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Legacy"
+}
