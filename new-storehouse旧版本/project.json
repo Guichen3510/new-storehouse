@@ -1,7 +1,7 @@
 {
   "name": "Edge-lazada店小秘",
   "description": "本流程：1.无产品1688链接抓取；2.无中文标题/短描述抓取。",
-  "main": "Main.xaml",
+  "main": "不同店小秘批量.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.12.3]",
     "UiPath.Mail.Activities": "[1.15.2]",
@@ -51,6 +51,18 @@
     {
       "filePath": "Main.xaml",
       "uniqueId": "d99bdf96-49f1-416d-9f06-8e822acfb809",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "不同店小秘批量.xaml",
+      "uniqueId": "2d94dc73-7798-4753-84f7-e9dcf24dc92b",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "ocr试验.xaml",
+      "uniqueId": "519794a0-65f7-412e-8274-784c06d21daf",
       "input": [],
       "output": []
     }
