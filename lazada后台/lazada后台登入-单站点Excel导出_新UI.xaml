@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="lazada后台登入_单站点Excel导出_新UI" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1160,19005" sap2010:WorkflowViewState.IdRef="lazada后台登入_单站点Excel导出_新UI_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="lazada后台登入_单站点Excel导出_新UI" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1122,19286" sap2010:WorkflowViewState.IdRef="lazada后台登入_单站点Excel导出_新UI_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
       <x:String>System.Activities</x:String>
@@ -87,11 +87,12 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="lazada后台登入_单站点Excel导出_新UI" sap:VirtualizedContainerService.HintSize="1132,18940" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="lazada后台登入_单站点Excel导出_新UI" sap:VirtualizedContainerService.HintSize="1132,19221" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="Dt" />
       <Variable x:TypeArguments="x:String" Name="row" />
       <Variable x:TypeArguments="x:String" Name="site" />
+      <Variable x:TypeArguments="x:String" Name="WebSite" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -126,6 +127,48 @@
         <OutArgument x:TypeArguments="x:String">[site]</OutArgument>
       </ui:InputDialog.Result>
     </ui:InputDialog>
+    <Switch x:TypeArguments="x:String" DisplayName="切换" Expression="[site]" sap:VirtualizedContainerService.HintSize="1090,241" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+      <Assign x:Key="MY" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_21">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[WebSite]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">https://sellercenter.lazada.com.my/apps/product/list?</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="PH" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_22">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[WebSite]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">https://sellercenter.lazada.com.ph/apps/product/list?</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="SG" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_23">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[WebSite]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">https://sellercenter.lazada.sg/apps/product/list?</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="TH" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_24">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[WebSite]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">https://sellercenter.lazada.co.th/apps/product/list?</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign x:Key="VN" sap:VirtualizedContainerService.HintSize="263,61" sap2010:WorkflowViewState.IdRef="Assign_25">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[WebSite]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["https://sellercenter.lazada.vn/apps/product/list?"]</InArgument>
+        </Assign.Value>
+      </Assign>
+    </Switch>
     <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt]" DisplayName="对于数据表中的每一行" sap:VirtualizedContainerService.HintSize="1090,18207" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
@@ -1412,7 +1455,7 @@
                     </ActivityAction>
                   </uix:NApplicationCard.Body>
                   <uix:NApplicationCard.TargetApp>
-                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAItSURBVFhHxZY/T9tAGMbfqQNSC3ER3ZEi0S79ChkqVZXyCTIwsrCwIaEudOgH6IIYUcYuGVqpc7d2JZDaMKDwR2qrVJGChFQK13vsXjjbz9mmRsfwU+LH9977vO+dfZaXa+17hYo+oaJPqOgTKvqEimBedmcCGbwOJBrNyaDDxrhAbEPCd5phWSwVdeKWTtwPJFSB7GtC1ZDo0yPZW2TjbRCLxElcEqvn6j2UqMnGpy4asr/QkIPuTeIs0QRdQYV2XJ3Y6Z9/VY94sE1cUR+tRUcC2XuGiW8Ta5uwDehJWJALTGbDxjBC9VjCpTsw8L/ckYG2HKlN+aG2t36p508P1SwZw6lp4MmDb9fvZayUXMcGPn6YqKsrpTbWv1c0UcMAEiApkn+Wc9Wcj9SrF0fqePg7NoH/LC5NTQOm+hU5ja8BlgDJqy1FTQNYexi4lD+xieXOScXKDTX3gDGBJbD3wNcvF/GSsJg0NTtgAw1t7+6MYxP4NbobhwG82XCTByWgQlSMREZDQpgwXSg3EI3w2s4ZALoLmUMoDSa3W461X105mz4FxY8iP9BSBoB1DOvDIz8RuoCXDxK+ffMzNgQDSM7Gg6JjOScYcMjAMeuGaTueAHQALydWOfTku+Cm5VmoaJPsjfxJh4SG7L3ENJZy0GJz2lAxS/lZb+P+ZmBQ0UXxJk02mevLxwUVi2CbtMq3nwsqVgGVahO9sk1WBhV9QkWfUNEnVPQJFf3Rlr/Zir8SqvI7+gAAAABJRU5ErkJggg==" InformativeScreenshot="5d79dd379d112c04245a611f91fff86b.png" Selector="&lt;html app='msedge.exe' url='https://sellercenter-my.lazada-seller.cn/apps/product/list?' /&gt;" Url="https://sellercenter-my.lazada-seller.cn/apps/product/list?" />
+                    <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAItSURBVFhHxZY/T9tAGMbfqQNSC3ER3ZEi0S79ChkqVZXyCTIwsrCwIaEudOgH6IIYUcYuGVqpc7d2JZDaMKDwR2qrVJGChFQK13vsXjjbz9mmRsfwU+LH9977vO+dfZaXa+17hYo+oaJPqOgTKvqEimBedmcCGbwOJBrNyaDDxrhAbEPCd5phWSwVdeKWTtwPJFSB7GtC1ZDo0yPZW2TjbRCLxElcEqvn6j2UqMnGpy4asr/QkIPuTeIs0QRdQYV2XJ3Y6Z9/VY94sE1cUR+tRUcC2XuGiW8Ta5uwDehJWJALTGbDxjBC9VjCpTsw8L/ckYG2HKlN+aG2t36p508P1SwZw6lp4MmDb9fvZayUXMcGPn6YqKsrpTbWv1c0UcMAEiApkn+Wc9Wcj9SrF0fqePg7NoH/LC5NTQOm+hU5ja8BlgDJqy1FTQNYexi4lD+xieXOScXKDTX3gDGBJbD3wNcvF/GSsJg0NTtgAw1t7+6MYxP4NbobhwG82XCTByWgQlSMREZDQpgwXSg3EI3w2s4ZALoLmUMoDSa3W461X105mz4FxY8iP9BSBoB1DOvDIz8RuoCXDxK+ffMzNgQDSM7Gg6JjOScYcMjAMeuGaTueAHQALydWOfTku+Cm5VmoaJPsjfxJh4SG7L3ENJZy0GJz2lAxS/lZb+P+ZmBQ0UXxJk02mevLxwUVi2CbtMq3nwsqVgGVahO9sk1WBhV9QkWfUNEnVPQJFf3Rlr/Zir8SqvI7+gAAAABJRU5ErkJggg==" InformativeScreenshot="5d79dd379d112c04245a611f91fff86b.png" Selector="&lt;html app='msedge.exe' url='https://sellercenter.lazada.vn/apps/product/list?' /&gt;" Url="[WebSite]" />
                   </uix:NApplicationCard.TargetApp>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1434,7 +1477,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="376,288" sap2010:WorkflowViewState.IdRef="Sequence_135">
+                    <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="376,286" sap2010:WorkflowViewState.IdRef="Sequence_135">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1463,7 +1506,7 @@
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ui:ElementOperationException" Name="exception" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="200,70" sap2010:WorkflowViewState.IdRef="Sequence_174">
+                    <Sequence DisplayName="序列" sap:VirtualizedContainerService.HintSize="376,70" sap2010:WorkflowViewState.IdRef="Sequence_174">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -2786,7 +2829,7 @@
                           </ActivityAction>
                         </uix:NApplicationCard.Body>
                         <uix:NApplicationCard.TargetApp>
-                          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAItSURBVFhHxZY/T9tAGMbfqQNSC3ER3ZEi0S79ChkqVZXyCTIwsrCwIaEudOgH6IIYUcYuGVqpc7d2JZDaMKDwR2qrVJGChFQK13vsXjjbz9mmRsfwU+LH9977vO+dfZaXa+17hYo+oaJPqOgTKvqEimBedmcCGbwOJBrNyaDDxrhAbEPCd5phWSwVdeKWTtwPJFSB7GtC1ZDo0yPZW2TjbRCLxElcEqvn6j2UqMnGpy4asr/QkIPuTeIs0QRdQYV2XJ3Y6Z9/VY94sE1cUR+tRUcC2XuGiW8Ta5uwDehJWJALTGbDxjBC9VjCpTsw8L/ckYG2HKlN+aG2t36p508P1SwZw6lp4MmDb9fvZayUXMcGPn6YqKsrpTbWv1c0UcMAEiApkn+Wc9Wcj9SrF0fqePg7NoH/LC5NTQOm+hU5ja8BlgDJqy1FTQNYexi4lD+xieXOScXKDTX3gDGBJbD3wNcvF/GSsJg0NTtgAw1t7+6MYxP4NbobhwG82XCTByWgQlSMREZDQpgwXSg3EI3w2s4ZALoLmUMoDSa3W461X105mz4FxY8iP9BSBoB1DOvDIz8RuoCXDxK+ffMzNgQDSM7Gg6JjOScYcMjAMeuGaTueAHQALydWOfTku+Cm5VmoaJPsjfxJh4SG7L3ENJZy0GJz2lAxS/lZb+P+ZmBQ0UXxJk02mevLxwUVi2CbtMq3nwsqVgGVahO9sk1WBhV9QkWfUNEnVPQJFf3Rlr/Zir8SqvI7+gAAAABJRU5ErkJggg==" InformativeScreenshot="5d79dd379d112c04245a611f91fff86b.png" Selector="&lt;html app='msedge.exe' url='https://sellercenter-my.lazada-seller.cn/apps/product/list?' /&gt;" Url="https://sellercenter-my.lazada-seller.cn/apps/product/list?" />
+                          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAItSURBVFhHxZY/T9tAGMbfqQNSC3ER3ZEi0S79ChkqVZXyCTIwsrCwIaEudOgH6IIYUcYuGVqpc7d2JZDaMKDwR2qrVJGChFQK13vsXjjbz9mmRsfwU+LH9977vO+dfZaXa+17hYo+oaJPqOgTKvqEimBedmcCGbwOJBrNyaDDxrhAbEPCd5phWSwVdeKWTtwPJFSB7GtC1ZDo0yPZW2TjbRCLxElcEqvn6j2UqMnGpy4asr/QkIPuTeIs0QRdQYV2XJ3Y6Z9/VY94sE1cUR+tRUcC2XuGiW8Ta5uwDehJWJALTGbDxjBC9VjCpTsw8L/ckYG2HKlN+aG2t36p508P1SwZw6lp4MmDb9fvZayUXMcGPn6YqKsrpTbWv1c0UcMAEiApkn+Wc9Wcj9SrF0fqePg7NoH/LC5NTQOm+hU5ja8BlgDJqy1FTQNYexi4lD+xieXOScXKDTX3gDGBJbD3wNcvF/GSsJg0NTtgAw1t7+6MYxP4NbobhwG82XCTByWgQlSMREZDQpgwXSg3EI3w2s4ZALoLmUMoDSa3W461X105mz4FxY8iP9BSBoB1DOvDIz8RuoCXDxK+ffMzNgQDSM7Gg6JjOScYcMjAMeuGaTueAHQALydWOfTku+Cm5VmoaJPsjfxJh4SG7L3ENJZy0GJz2lAxS/lZb+P+ZmBQ0UXxJk02mevLxwUVi2CbtMq3nwsqVgGVahO9sk1WBhV9QkWfUNEnVPQJFf3Rlr/Zir8SqvI7+gAAAABJRU5ErkJggg==" InformativeScreenshot="5d79dd379d112c04245a611f91fff86b.png" Selector="&lt;html app='msedge.exe' url='https://sellercenter.lazada.vn/apps/product/list?' /&gt;" Url="[WebSite]" />
                         </uix:NApplicationCard.TargetApp>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
