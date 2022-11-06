@@ -1,0 +1,1118 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="不同店小秘批量" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1596,13512" sap2010:WorkflowViewState.IdRef="不同店小秘批量_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="44">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="不同店小秘批量" sap:VirtualizedContainerService.HintSize="1606,13447" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="url_moban" />
+      <Variable x:TypeArguments="x:String" Name="row" />
+      <Variable x:TypeArguments="x:String" Name="SKU" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Exceldate" />
+      <Variable x:TypeArguments="sd:DataTable" Name="Dt" />
+      <Variable x:TypeArguments="x:String" Name="row_new" />
+      <Variable x:TypeArguments="x:String" Name="path" />
+      <Variable x:TypeArguments="x:String" Name="store1" />
+      <Variable x:TypeArguments="x:String" Name="store2" />
+      <Variable x:TypeArguments="ui:UiElement" Name="url_mb2" />
+      <Variable x:TypeArguments="sd:DataTable" Name="DT1" />
+      <Variable x:TypeArguments="x:Int32" Name="Row12" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="1564,61" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["C:\Users\CG\Desktop\批量.xlsx"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel 应用程序范围" sap:VirtualizedContainerService.HintSize="1564,559" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="[path]">
+      <ui:ExcelApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="376,450" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[DT1]" DisplayName="读取范围" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_3" Range="C1" SheetName="Sheet1" />
+            <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[Row12]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[DT1.Rows.Count()+2]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[Exceldate]" DisplayName="读取范围" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" Range="[&quot;A&quot;&amp;Row12.ToString]" SheetName="Sheet1" />
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[Dt]" DisplayName="读取范围" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Sheet2">
+              <ui:ExcelReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ExcelReadRange.Range>
+            </ui:ExcelReadRange>
+          </Sequence>
+        </ActivityAction>
+      </ui:ExcelApplicationScope.Body>
+    </ui:ExcelApplicationScope>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="输入对话框" sap:VirtualizedContainerService.HintSize="1564,246" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="请输入模板链接:" Title="输入模板链接">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[url_moban]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="输入对话框" sap:VirtualizedContainerService.HintSize="1564,246" sap2010:WorkflowViewState.IdRef="InputDialog_3" IsPassword="False" Label="请输入SKU:" Title="输入SKU">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[SKU]</OutArgument>
+      </ui:InputDialog.Result>
+    </ui:InputDialog>
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Dt]" DisplayName="对于数据表中的每一行" sap:VirtualizedContainerService.HintSize="1564,12083" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+      <ui:ForEachRow.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_new" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="正文" sap:VirtualizedContainerService.HintSize="1530,11965" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="使用浏览器 Edge: 店小秘--免费的跨境电商ERP" sap:VirtualizedContainerService.HintSize="1488,11873" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V2" WindowResize="Maximize">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="1454,11655" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <Sequence.Variables>
+                      <Variable x:TypeArguments="x:String" Name="yzm" />
+                    </Sequence.Variables>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="1412,390" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,312" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="输入信息 'INPUT exampleInputName'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Text="[row_new(1).ToString]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/index.htm" DesignTimeRectangle="1111, 348, 347, 39" ElementType="InputBox" FriendlyName="'INPUT exampleInputName'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="c4ebf537-21f5-46d1-abcf-f69cf219e2f6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVsAAAAnCAYAAAChWOvjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANwSURBVHhe7d1NS+NAHMfxfec+HURQfDjZN1AEQdTaq4i2u+obaD2qB0HtQdGbdnZ/k1TbdGImmTGy9PuBP6zJjN6+zMa2/jIAgG/3EduXlxdz1e+by4tzc/7nN8MwDFNx1FH1VF0dsbHVBd0cDB7NcDi0NwAA1aij6qm6Ogquja0KrBsAgHjUVfVVbGxVX060ABCXuqq+io2tnjEAAOIb9ZXYAsA3IrYAUANiCwA1ILYAUIOosb2+vja7u7tmbW3NLC4umtXVVfu1rgPALIsS2/f3d3N4eGjm5uZy5+joyK4DgFkUJbbtdtsZ2OxoHQDMouDY3t7emvn5eWdcs6N1Nzc36c4f0GuZRruXfgEA9QmO7d7enjOseaP1ZfXaDdNo+E2z+5DucnkwnWbRmkn2ZxNoAIGCY7uxseGMat6sr6+nO/0peK2J3iXRnLyWrBsPqX+km6Zzn24aU7y/ZcgwAB/BsV1eXnZGNW+0vqyQ2BafYnum5YitDW3eifa+Y5o5gQYAl+DYbm5uOqOaNzoJl1V8wvyc8Njq62TfQ7c5vV/PfTnRAigpOLYHBwfOqObN/v5+utOfolnPyTYJ7ef3TX5Oo9n596/kHs9vAVQRHNu7uzuzsLDgDGt2tE7rywqJrev0Oz1fPRJIg8tpFkCA4NjKycmJM67ZOT4+TneU4x/N6dhmgzwt+xghoUcIru8/MfbECwDFosRWzs7O7Ft0XZHV9dPT03RlWTpZZmPoc7J1r/mS/cXXZ0y/fAShtcQWgKcosX17ezPdbtesrKw4Y6vruq915enkmf0vvE9sXfv8OX85No7YAighOLbPz8/2FOiKbHa2t7fN09NTutOTM2oesdWrBgJiSGwBxBQU29fX19Iv/dL68T/rW2TytDpSFNsKjxAyeGYLIKag2O7s7DiDWjTa58v9KGAspvZ1r6MAps92I5w6OdkCiKlybPUBNK6Q+s6PfiANANSscmzLvpkhO1Xe3AAA/6vKsd3a2nJG1Hf07BYAZkXl2C4tLTkj6jvaDwCzonJsAQD+iC0A1IDYAkANiC0A1GAitpcX52Y4HNoLAIA41FX1VWxsr/p9Mxg82gsAgDjUVfVVbGz1mQWqr25wwgWAMOqoeqqujj4TxsZWdEEF1k09Y2AYhmGqjTqqno5/+NZHbAEA38WYv28GltVDgfRLAAAAAElFTkSuQmCC" InformativeScreenshot="94fe6bf36059e2b40a9041310e5dfb2e.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--免费的跨境电商ERP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="1412,390" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,312" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="输入信息 'INPUT exampleInputPassw…'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Text="[row_new(2).ToString]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/index.htm" DesignTimeRectangle="1113, 408, 343, 35" ElementType="InputBoxPassword" FriendlyName="'INPUT exampleInputPassw…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' class='form-control' aaname='' /&gt;" Guid="c34985c2-48e7-4274-a392-1e7e1e9b6188" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAVsAAAAnCAYAAAChWOvjAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPySURBVHhe7d3LSxtdGMfx9z/3gihecaGLgIp4iYIiyOBG3RkvLerCTexSEBemLtSIF9Cn+Z3MxCRzjDqZCe2b7wceimfOZPnldDqm/xkAIHO12JbLZft1fm4/fxzZ0eEBwzAMk3DUUfVUXY242GpBF29uftvb25u7AABIRh1VT9XVKLgutiqwLgAA0qOuqq/iYqv6cqIFgHSpq+qruNjqGQMAIH1RX4ktAGSI2AJABxBbAOgAYgsAHZBabF9fX+3k5MTm5uZsaGjIBgcHbXZ21o6Pj901AOhmqcT28fHRRbanp8eGh4ctn8/b4uKiDQwMuDVd0x4A6FapxHZ1ddVFNQgCe3l5CVfN7u7ubGFhwV1bWVkJVwGg+7Qd26urKxfTmZkZ7y9EPD8/2/j4uNtzeXkZrgJAd2k7tgcHBy6kh4eH4UqcTrzas7e3F660qRhYLpe3wnX4c0zJCvlcZU/jBFu6L76eywVWDO8EgCy0HdudnR0X0rOzs3AlLtqjP7/LF82Wky9UUvuuuFWJbMuSFi1ougcA0vZPxLY5lqX9oOFUq6DmtiqbrguWbwhnJaRNp9ZYfHVK1r0AkKG/PrYSxbS0n7f8fslK18WGE6/WfNHU/ua15thGnwkAWUocW707e3p6atPT0y6kk5OTjX+dr5vR0VG3Z2pqyr2L+533bl0ww9NpLbZurfLZYUgVUK3XTrjV1cqptvlUrGe59c96m38GgGwkiq1e75qfn3cBTTJ677b+FbFP6fFAXbwbT6LVfwyrRvU9ni68dfdUn+VWA9ywHg3PbQFkKFFsd3d3vRH9zmxvb4ef1pqLbC2E/rcMYqFUnLeCSljDU6seMbSK6WfXAaBNiWI7MTHhDahmbW3NHh4e3Kyvr3v3aMbGxsJPy4pOscQWwN8hUWx7e3u9Ae3r67Onp6dwV/UXGrTm26v5quiZ7Lv4WwbxYMZjW2h+tOAmsIKeARNbABlKFFtfODUKa/13ICi8/f393r2ar0orth/F1PfWAgCkKdXYapaWllxwNcvLy9490XxV7B+7PppYbD+61qjxLQYASF/qsdVcXFy48V2rn1R982Rbe33MTbgPADKSKLb6GkVfPKPR9yXouxJ816LRd94CQLdIFNuNjQ1vQL8zelMBALpFotjqe2pbvf712eje29vb8NMA4P8vUWzl/v7eNjc3bWRkxBtU32iv7lGsAaCbJI4tAODriC0AdACxBYAOILYA0AENsf3548j7nzYCAJJTV9VXcbH9dX5uNze/3QIAIB3qqvoqLrblctnVVxc44QJAe9RR9VRdVV/FxVa0oALrop4xMAzDMMlGHVVPo9BKLbYAgKyY/QE649TywedPOAAAAABJRU5ErkJggg==" InformativeScreenshot="4c8ecdcabea7743ea373d6b0294e3f60.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--免费的跨境电商ERP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="1412,328" sap2010:WorkflowViewState.IdRef="CommentOut_5">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ClickType="Single" DisplayName="单击 'IMG loginImgVcode'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/index.htm?ts=1667550547" DesignTimeRectangle="1347, 424, 107, 33" ElementType="Icon" FriendlyName="'IMG loginImgVcode'" FullSelectorArgument="&lt;webctrl id='loginImgVcode' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='loginImgVcode' tag='IMG' type='' class='' aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9; &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' /&gt;" Guid="76779b9d-4f79-42dc-81b9-ae1d7f0f4c1f" ImageBase64="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" InformativeScreenshot="80860349ee15f5e31f61366b231b159c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--免费的跨境电商ERP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="1412,416" sap2010:WorkflowViewState.IdRef="CommentOut_6">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,338" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="输入对话框" sap:VirtualizedContainerService.HintSize="334,246" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="请输入验证码:" Title="输入验证码">
+                            <ui:InputDialog.Result>
+                              <OutArgument x:TypeArguments="x:String">[yzm]</OutArgument>
+                            </ui:InputDialog.Result>
+                          </ui:InputDialog>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="1412,390" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,312" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="输入信息 'INPUT loginVerifyCode'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Text="[yzm]" Version="V1">
+                            <uix:NTypeInto.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/index.htm" DesignTimeRectangle="1113, 466, 343, 35" ElementType="InputBox" FriendlyName="'INPUT loginVerifyCode'" FullSelectorArgument="&lt;webctrl id='loginVerifyCode' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='loginVerifyCode' tag='INPUT' type='text' class='form-control' aaname='' /&gt;" Guid="f3a6c74b-47ba-46d0-a7a5-f548c7172a6a" ImageBase64="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" InformativeScreenshot="fc0625ce6bb0e7a46c956bddbb86f14c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--免费的跨境电商ERP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NTypeInto.Target>
+                          </uix:NTypeInto>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <ui:CommentOut DisplayName="注释掉" sap:VirtualizedContainerService.HintSize="1412,328" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="已忽略的活动" sap:VirtualizedContainerService.HintSize="376,250" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ClickType="Single" DisplayName="单击 '登录'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V1">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/index.htm" DesignTimeRectangle="1112, 534, 345, 41" ElementType="Button" FriendlyName="'登录'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='button' class='loginbnt btn btn-info btn-denglu btn-block index-denglu-btn' aaname='登录' check:innerText='登录' /&gt;" Guid="ea669643-ce40-4539-b946-96a7683c03cc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAV0AAAAtCAYAAAAN3bjCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQnSURBVHhe7dxBaxxlGMDx9ebBm34A8dCL4PcQP4KCnnudSw6FQEBBBE+KUOeqpxxse5Kw6EFCEJMiLQsxpMk2YtNk2dFN3S3bZB+f531ndmd2R7rNNu+7hf8DP9rdzkxzWP4M776ThjAMwzDBhugyDMMEnEp0d46fyid3Hsu7N4/k2jcPAQCX9N63R/Lx7ceuq+UZR3fn0UDe/qotb3xxIK99ti+NTwEAl2UdtZ6+83Xb9bWYcXQ/+uGY2ALAS2Zd/VD7WoyL7mg0kre+PKg9AQCwmDe1r9bZcXQvLi64ywWAK2J9tc5Wolt3IADg5SC6ABAQ0QWAgIguAAREdAEgIKILAAERXQAIiOgCQEBEF0tsVxrJLWnc0D+L9278VH0NvGKILiK7J43rGtY6qx1pDkSyvT/1OB/gZO9csoOTqWvkca67Rp3V8rlAWEQXkfWk5T6Cs9P6fV+Sw3OR/qkk1++7AMugL+nGI42n3vGuFdfwcZ53Wjvl/x8Ii+giMrvT3Zq8XtuWZPeZfhqHkrr3JlHODjv58W1971yaG8U15nUizT7RRVxEF3Gt/a0B/VdSd+eqQV0/lUwuKkFNDvVDane7iR7jgqvT6VWvY2u9dUsJFXq3THQRGdFFXBsdSS2qdue67oPa+m02mOmJ3un2h/Yxze94q9dxYZ5ziC5iIrqIb0XDuqm3oDq2jpt23F+r0+n7L9X272uES8sRL4TlBcRHdBGR33Vgd7EiA0mn7m7rpO4X7z/1xybbcy4rFPLlhc38tZ1f+3MBV4foIqJ8S5gtF/zYk8x9FJ83z6Spx7p13UFfbr/AssLM6PlJ7c8FXB2ii+XgotvPdyz8n67G1qI7/f7UXt98H27ywHZBaNT32rPHsVcXkRBdLAcX3d5zlhjsi7aa6LodEJNp3d3WY7d8dE+e6N10sXTx1/i41l2eakMcRBfLYaM/5/JCdTuZP7fjlwlWt3yc1//Raw2l6aLbLV17EuxEz6lcAwiE6GKJ2BqvhnF9enfCPWls9nxAK+/nii/Tfi0eS/MPVvg73fwcF17blqbH8QUaIiK6WCp+v21P0vIvtVnx+3ezTm/2i68V//sY3NgXY6XdDO7JttPyQxTFF3B6HTtmRWNevhYQANFFXLZHN49kwbaFZbu2H3fyWo7blWMcjabb01vahVB9SKJmKcIUyw3TT7UBARBdRFX7IMS8QzTxCiK6ABAQ0QWAgIguAAREdAEgIKILAAERXQAIiOgCQEBEFwACmonu658/qD0QALAY6+tMdD/4/qj2YADAYqyvleiORiP5ZT/TGtefAAC4HOuq9dU6O46uzXA4lJ//OJX3v3tIfAFgQdZR66l11fpazDi6VmH7h7OzM8myTLrdLgDgkqyj1lPranGXazOObjH2j7b2AABYTDm2fkT+AxAO6sc+D26MAAAAAElFTkSuQmCC" InformativeScreenshot="a407c8487ed52ee03e2e74a94542a374.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--免费的跨境电商ERP' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="使用浏览器 Edge: 店小秘--编辑Lazada产品模板" sap:VirtualizedContainerService.HintSize="1412,593" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" OutUiElement="[url_mb2]" ScopeGuid="922f9e52-0866-4be0-838d-2c76056117cf" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="376,375" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NGetText DisplayName="获取文本 '童装51_MY'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="922f9e52-0866-4be0-838d-2c76056117cf" Version="V1">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/userTemplate/lazada/edit.htm?id=192432" DesignTimeRectangle="546, 404, 350, 32" ElementType="DropDown" FriendlyName="'童装51_MY'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='w350' aaname='' /&gt;" Guid="1b951790-cd83-4e41-a4be-35e74949b460" InformativeScreenshot="49526bdb1a5b98a496dfe7335a18d2a2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品模板' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                              </uix:NGetText.Target>
+                              <uix:NGetText.Text>
+                                <OutArgument x:TypeArguments="x:String">[store2]</OutArgument>
+                              </uix:NGetText.Text>
+                            </uix:NGetText>
+                            <uix:NNavigateBrowser Action="CloseTab" DisplayName="浏览器导航 - 关闭选项卡" sap:VirtualizedContainerService.HintSize="334,83" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_2" Version="V1" />
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARhSURBVHhe7ZpbiE1RGMdnCBGN+yWpSRJRiHjgETVqZB7OXhdnJnmYUqQ8SWjKgxSKEsrtRSiXKCQvrkWUzBgkaTy4lLuUphnG/5vznZl19lnnHGfvzdlzZv3qqzNrfevb3/rvfdb+1jpT4XA4HA6H479SX18/Xmp5UCj5EvZCKLG/rqFhDHeXN4lEYmhq0rLLZy3oG8xu5YunVNIy+W6TUtaxW/niSbnVNvmUiU3sVr7gCVD2ycsu9NWyW/lSU1MzBJNt8U8ed/9RY2PjIHYrb5LJ5CSp5I305PH5Ph6MCdzdPxBarE8L4Gm5l5v7D04AJ0A/EaCpqWmAEGJmQuv5pmHV35UWAJ/PetpbmraEUkswZjqHiB9UzqJqm6K1nprPMInlmGBb70SLNfXcW+0ttsU2DblUI6fhnN4/oxKFiofE7sJ+ZSYaC/sNewAx6ump45yjgTYpuBunfBeMrXlKXqytrR3G6YcHhcoJ24XibMj5DKcfDlqUsi+gWmHHhJSHY2GUi5KPs/IUooanERxc4FxmYLEfX4mB3B0nKiHETjNXfBXOc19wEOi9EfRdnA8t6Mbghr0y8n3PXcFBkM7egOo6N8cWPKEXevOVndwcHCMYTFzm5tgitDxt5szNwTGDOQGcAIUFoFMdpdQsLEhV3BQaKmqo5P2bt09kAqCkXIQdW4MZrJAAntYr4PeJ/X9i0dzAXYGh0haxvnHMD3QN7rLiF4DmgM3XQu7+O6SW2zKC9FhuAXB3JsInnWjafmMCC9ilaGhHiBgdmTHV93zHZ1kCsNFpNLsUBgO++gOkLLcA2NPvs40JU5LinX7EFhMi7GGXLHIJgNy/sEth7AHIcguAZO/Yx8g2dikaTBQlty2muskuWeQWoIj1wDY4ZXkEUKLZPkZ+Y5eiQSn71hKPrIVdsiilAGYF1mP4Cjxkl6LB2Nu2mLjWJXbJomQCYLGrs47RYiO7FA3GrssRU7JLFiUTAFTi4tcy/VVrmIMJ/hXpSWZMeTffiU8pBUidHOGOI4mT9CpdtWbNSO4KDF55Y3Hd3Yh5BTF3rFy7cgR3WSmpAHHACRCRAL7qK219WoAOdikMnP0LD1t4AbBOjKOzfv6zB7xFptAPJvxnYHILIJrZpTBIZh4G3cN7+KMvSCRPAB1b0yIJMSbDqmjDgtiP8HkouwTGIgBtzu5B3LnsUhyZwaIRAAJXI94bI/YPrPbLuDsUfgG4OThmsKgEIHC3R6NO2ICYmxPJxDRuDk2fEeBf4QRwAkQvQLsR8BY3xxa8Ya4a+bZzc3AQxPh9X32n9zh3xQ6t9Sjk+bknXy1fc1dwUAsc7RWge39/g/7NjbtjA27MRNyg62auQsrj3B0cIcRsBDN+Hus2KpWf0WFHHAy5PIX5c/yF3OfwNMKBqm2LL3gfMLGd048GKlgQOMcmKVaGJ6F78pWpzCME5eoMBD9AJz149GifQAtOHIzqfXwNxCH6ynK6DofD4XA48lFR8QdyN++Yg84/rAAAAABJRU5ErkJggg==" InformativeScreenshot="546bce6ae53ec78a3331d727ab01459b.png" Selector="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品模板' /&gt;" Url="[url_moban]" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                    <uix:NGoToUrl DisplayName="转至 URL" sap:VirtualizedContainerService.HintSize="1412,83" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.dianxiaomi.com/lazadaProduct/draft.htm?dxmState=draft" Version="V1" />
+                    <uix:NClick ClickType="Single" DisplayName="单击 'SKU'" sap:VirtualizedContainerService.HintSize="1412,158" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V1">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/draft.htm?dxmState=draft" DesignTimeRectangle="391, 329, 37, 19" ElementType="Text" FriendlyName="'SKU'" FullSelectorArgument="&lt;webctrl aaname='SKU' parentid='myTabContentOne' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='SKU' parentid='myTabContentOne' tag='A' type='' class='' check:innerText='SKU' /&gt;" Guid="5f6b93e9-afb3-4399-b56d-bfaf81dc553a" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAXCAYAAACWEGYrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEASURBVEhL7ZONCYMwEEa7W6HQYYLgKAH3CDiH4ha6xTXJXZozP1VKDLTkgaAXEx53X27wAzTJUjTJUvyL5ALy8YT7++lBbbSkmaWuyYW+iG0EYf61ddwvJ1zy5OoxB5J4kFArfWusgBeNJcM9V0sGQg4j5iT2kiuoLi1dt5MBXNK+d6NW5VwuqZkGlsf4UCe5ql6vDzBT3VNDkmGFrGyQSaqJaNSGypIOPlaUJGm61ft4YE7jyBSStCOMOkN1Lsn/sfHgly0jmbmUKT53MtkZ7ICrRZIa7K7PJ+Z1L8SnccSJcaNU7vKkJP2eUJSdc1LQ8FUma9MkS9EkS9EkywDwAvIt+Pfbrf6+AAAAAElFTkSuQmCC" InformativeScreenshot="797c29029490972e8515e152f511466b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--产品管理' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="输入信息 'INPUT searchValue'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1412,220" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Text="[SKU]" Version="V1">
+                      <uix:NTypeInto.Target>
+                        <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/draft.htm?dxmState=draft" DesignTimeRectangle="336, 365, 480, 32" ElementType="InputBox" FriendlyName="'INPUT searchValue'" FullSelectorArgument="&lt;webctrl id='searchValue' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='searchValue' tag='INPUT' type='text' class='form-component w480 m-right10 batchSearchType p-left30' aaname='' /&gt;" Guid="d535fdc3-e762-418a-9a2b-3d4bebf82fb3" ImageBase64="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" InformativeScreenshot="e9c4e63f1febef5128bea6742c7d09aa.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--产品管理' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                      </uix:NTypeInto.Target>
+                    </uix:NTypeInto>
+                    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Exceldate]" DisplayName="对于数据表中的每一行" sap:VirtualizedContainerService.HintSize="1412,7865" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="正文" sap:VirtualizedContainerService.HintSize="1378,7747" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="ui:UiElement" Name="url_bjym" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <uix:NClick ClickType="Single" DisplayName="单击 '搜索'" sap:VirtualizedContainerService.HintSize="1336,158" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/draft.htm?dxmState=draft" DesignTimeRectangle="826, 322, 52, 32" ElementType="Button" FriendlyName="'搜索'" FullSelectorArgument="&lt;webctrl tag='BUTTON' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='button btn-determine serchBtn m-right10' aaname='搜索' check:innerText='搜索' /&gt;" Guid="9349c87d-f015-4b5d-b6a8-e967addaa031" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAkCAYAAADckvn+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGSSURBVGhD7ZkxbsMgFIZ7p869WKfeIFexKkWVegTLnTPZSzpZmewhUpZXHvBjsKkbGyoVyif9Ugw48ef3YMkDZc7/EXz9+KSnl3d6fH5LOuzALsAI5iCHsAswgr6FKQcUwVQDimCqAUUw1YBwweOFhuuFDmbsRPWVaOjH2fhaztTRSJV3bl9AXMFmlN81tCc9PlInZBUQYJl72S8NggSrXt8suVHdiqqxHM87leWqrj1sYhVkulaNV+1Nj2gBa809dI31WxsCogv+WEF7jQh3gZGQ8qITjp65jQHRBOtetej3zFrQV0nzQsIDAgXVicks3rRTwbWoQwf3c9XsCu8NCBBkOVG1ZhI5mP22ZPnQeDmqsu6BxYQdOiDuHhRhSVeGKzTtq2lsjm/NfkkQXZBj2oznFg+O2OK6G8Rn2QUR9iL4FUH7APGdgmjlaW4SlNe4P0AUBAmaPdef3VORr/UaZ2+JcXmNeVlhjUfGWbsxILyCfzSgCKYaUARTDSiCqQYUwVQDjGD2f75k//dZrmQuSPQFg4b3ms9JHwIAAAAASUVORK5CYII=" InformativeScreenshot="68c9c8fc9bc1b897fddd885ba5fbd45c.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--产品管理' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="单击 '编辑'" sap:VirtualizedContainerService.HintSize="1336,158" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/draft.htm?dxmState=draft" DesignTimeRectangle="1730, 604, 80, 22" ElementType="Text" FriendlyName="'编辑'" FullSelectorArgument="&lt;webctrl parentid='goodsContent' tag='TABLE' /&gt;&lt;webctrl aaname='编辑' tableRow='3' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='goodsContent' tag='TABLE' /&gt;&lt;webctrl aaname='编辑' type='' tag='A' class='' check:innerText='编辑' /&gt;" Guid="997f52d9-e0d3-4c87-a0a8-3d61fc2b5fa1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFQAAAAaCAYAAAApOXvdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFwSURBVGhD7Za9jcMwDEZvtszjTa5ymxFceQEvcEACBEjjNk2a7MAjaYqiLMU54FjZfIDgfwN6/ij6CwJXQqgzIdSZEOpMCHUmhDqzEvqC8XyB8SmHwnO6wOk8w+q0Qtf7mxzc7nD6/mmMO1zllj1TCiUZw4N3r0NLShpWOn0EI8u8I/OA/nhCSzEkVFNXkFNcS8fzUyR0AZPVTS+s3xk6nHz/x4RSufNzAaNCc9py+toJtUiqtcyptK341aiWgv2xWkNnTR4LHd6Vr8hOIu26SQmvGhiK3mhqe8IINenCyY8ilMo5dfHWthSN6caP0hXnZBxOKKVM10ZpPNhgtoQqkVClLHlFfnNYciNtOKxQm9R+ioRmuMOLAFkb3yeUUrzc22GaPyb0IFJVKHd5nvAiihO4KXR5jqlKHn+l0odJ47AlbxMmQhVNcP4PZZJQ2uL1DverhB5WaPAvQqgzIdSZEOpMCHUmhDoTQp0Joa4A/AJZaS/CRSSWLwAAAABJRU5ErkJggg==" InformativeScreenshot="c95ba3b9ff4b15a0677a79fafd201456.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='店小秘--产品管理' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="1722, 534, 97, 40" ElementType="Text" FriendlyName="'操作'" FullSelectorArgument="&lt;webctrl parentid='goodsContent' tag='TABLE' /&gt;&lt;webctrl aaname='操作' tableRow='1' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='goodsContent' tag='TABLE' /&gt;&lt;webctrl aaname='操作' type='' tag='TH' class='operating w80' check:innerText='操作' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGUAAAAsCAYAAAB8K3ZrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGcSURBVHhe7ZzBqoMwEEX9/694UChC6aoIrgS7LvoJ0p0/4HpeRhObqC1W83gXvIGzSJpQmOPMxI2JcMCNpG1bIRi4kXRdJ+T/oRRAKAUQSgGEUgChFEAoBRBKAYRSAKEUQCgFEEoBhFIA2SylKa/yc8rlofPmLunpbOYLZPXCubPcKu/cZM/RiSolLZ/enlpus4A/pbiorOFcIGjcQzZJeWQ2C3quUlQrM6XKvTUn6A2XuzTefx6JOJmyipeEPqN6QZ5QlrCRKFLCzDFrLiMsWp5cqVLSsh4EqQj2lRk7pZhgmjJTqBQNai/DSVFhQ19RKb64NMuNCJtli5cE+9tB2S1FS9G6TMmlMOg8uBAwU2ZskOI36PkTPQh686RbWZTymf09ZbH8THABp5RVRGn0w5p9LxkxN6smPPNRyoQjv7vEkeIFeyxfNthBcJkpq9gkZWzsGkgbaBf8sKfY/sPy9RWbM4X8HZQCCKUAQimAUAoglAIIpQBCKYBQCiCUAgilAEIpgFAKIJQCSCBFJwQDN/jFCZBBKYDjJUXkFzwukyuGIMsyAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NClick ClickType="Single" DisplayName="单击 '跳过，去编辑产品'" sap:VirtualizedContainerService.HintSize="1336,158" sap2010:WorkflowViewState.IdRef="NClick_10" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0b4f5540-2a1e-4d51-b5a5-e00877d5e3cc" Version="V1">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/draft.htm?dxmState=draft" DesignTimeRectangle="1100, 412, 130, 32" ElementType="Button" FriendlyName="'跳过，去编辑产品'" FullSelectorArgument="&lt;webctrl aaname='跳过，去编辑产品' parentid='batchClassifyMatchingCategoryModal' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='跳过，去编辑产品' parentid='batchClassifyMatchingCategoryModal' tag='BUTTON' type='button' class='button btn-gray m-left8 jumpOverGoEditProBtn' check:innerText='跳过，去编辑产品' /&gt;" Guid="c50ba5d3-3de6-4bfd-b4b8-8630d4ee91f7" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIYAAAAkCAYAAABMrUJ0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPlSURBVHhe7Zw7axVRFIX9b4JgKYilD7QRX52IlYiViJVop1ipndr5BJUgqIUkEpCkSlKZqJA/MPINrGHluOdxk7nkhrsPfMyc1z5777POmRBIDlVZsgQlhZElLI0wfv/5Wy0t/6y+Ly0ncwh7jwZUGmHQsbm1VW1vbydzCHuPBlQaYaCaaEIyP6ABlRRG0pDCSEJSGElICiMJSWEkISmMJGQ0YXz4+Kk6fORozbHjJ6rFxaW6/fadu3Xfk6fPanzOvfsPmnERa2vr9fxfm5th/17AF2xHfQK/yzH4dOrMubrP271fPsPVa9ebvDhlLhzlLOoTnu82+mx0MaowCJZk3Lh5qzp5+myTfPWBJ453Esczsuljo/69IN+iPlAcCBcQe5R8cDuKtbShflAuvM3BBnnpitvXiVDeo74hTE0Yz1+8rJ+gPigd9r4o6YJT2iagPvo21pFv8kvziSPaKMYRU7QGc7puDOIhrqi/Dfnk/kXMlDDkPAn68vVbkxQFcf7i5R2nq4/9ujFYjz6tzwYPuTEY33UDdkGOIvHjZyQAz3cbMyOMh48eNwlVO3UJIwpQaBNcBFHbWHQJw08/Y7puDEc5YCxzWKPcLIF9xvh86vzcpXqXj8pp1AfMmwlhgJ806jhGEhSE3unz5KtN42Rvv4QBrMnnkHd85Sa4cOlKs7EOfesbG7UguCklDOZGG8TaaiPGST4npa1pMZowSMCr12+azwefDRJEXRvOaVLd56nOZnhSxxCGC3Ao8ld1+V37tvSj9mllZWXnc3X1vw2mHbxNKGZixLYO0xBKm7p9olgZG9noY3Rh8FSySCKnDIdJNJSbzbsLhbG6TscQRgR+sBltdmmnn7Wp4x+iUEw8S2HIFs9Jb4zdCEPzfT3gXb4whrE+dyhTEYaCxFGEQV3CiOaViRNloGPgPlEfkjz81q3hp1G4yLCrm4N2/C/Hg2LeTYyeswMhDJKnq4xk0ibHXBj+7kEK2pRAjXMInKSX8/pg06LT2ZZA+UFM/OxAve3GePvufTOWzyibJBuln8TEWNrb1u7Cbc60MHCAQP3k0KZvH/VIDDz5RZif4CFgc9I5jNVnjbrEhd9CSWQMvuMjSEz07+ZTglB8HcCu+vU+FOa4LeVZfnsfYyMbfYx2YzjlJgDBy1mu2oWFzzt+luj7ydxFhq1JAo7suz2BcMtN0sax4bxjy/uw5b5IGPo9Duvyrn7QOqzvJ3wo8ol3F2Jpb9I8OVMRRnLwSWEkISmMJCSFkYSkMJKQFEYSksJIQlIYSUgKIwkJhZF/1DzftP5Rc/4bhPmGvQ//DUKWLF5SGFmCUlX/AL0aNeR/oSbtAAAAAElFTkSuQmCC" InformativeScreenshot="0826cb0709fd21d0620056f996214574.png" ScopeSelectorArgument="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--产品管理' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="使用浏览器 Edge: 店小秘--编辑Lazada产品" sap:VirtualizedContainerService.HintSize="1336,7059" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" OutUiElement="[url_bjym]" ScopeGuid="b2bba58b-14a5-454d-b1ab-3691f2359e45" Version="V2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="1302,6841" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                    <Sequence.Variables>
+                                      <Variable x:TypeArguments="x:String" Name="title" />
+                                      <Variable x:TypeArguments="x:Int32" Name="rowno" />
+                                      <Variable x:TypeArguments="ui:UiElement" Name="url_mb" />
+                                      <Variable x:TypeArguments="x:String" Name="wenben1" />
+                                      <Variable x:TypeArguments="x:String" Name="wenben2" />
+                                    </Sequence.Variables>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NGetText DisplayName="获取文本 '童装51_MY'" sap:VirtualizedContainerService.HintSize="1260,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="b2bba58b-14a5-454d-b1ab-3691f2359e45" Version="V1">
+                                      <uix:NGetText.Target>
+                                        <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/edit.htm?id=34851361646818471" DesignTimeRectangle="546, 527, 240, 32" ElementType="DropDown" FriendlyName="'童装51_MY'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='fl' aaname='' /&gt;" Guid="b7806ee4-785d-4357-9889-668b00ec711d" InformativeScreenshot="221675e94cbfa48436115199672a79e8.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                      </uix:NGetText.Target>
+                                      <uix:NGetText.Text>
+                                        <OutArgument x:TypeArguments="x:String">[store1]</OutArgument>
+                                      </uix:NGetText.Text>
+                                    </uix:NGetText>
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="获取URL" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d7fa987-4ba7-46d6-bfa6-0636c0b91489" InformativeScreenshot="db9f36cda00bca169634c5e856dee62e" Selector="&lt;webctrl id='sourceTab' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='INPUT' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+                                      </ui:GetValue.Value>
+                                    </ui:GetValue>
+                                    <If Condition="[store2 = store1]" DisplayName="IF 条件" sap:VirtualizedContainerService.HintSize="1260,53" sap2010:WorkflowViewState.IdRef="If_2">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="898,86" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="898,70" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="使用浏览器 Edge: 店小秘--编辑Lazada产品模板" sap:VirtualizedContainerService.HintSize="856,769" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" InteractionMode="DebuggerApi" OutUiElement="[url_mb]" ScopeGuid="922f9e52-0866-4be0-838d-2c76056117cf" Version="V2">
+                                            <uix:NApplicationCard.Body>
+                                              <ActivityAction x:TypeArguments="x:Object">
+                                                <ActivityAction.Argument>
+                                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                </ActivityAction.Argument>
+                                                <Sequence DisplayName="执行" sap:VirtualizedContainerService.HintSize="376,551" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                                                  <sap:WorkflowViewStateService.ViewState>
+                                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    </scg:Dictionary>
+                                                  </sap:WorkflowViewStateService.ViewState>
+                                                  <uix:NSelectItem DisplayName="选择项目 '童装51_MY'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NSelectItem_2" Item="[store1]" ScopeIdentifier="922f9e52-0866-4be0-838d-2c76056117cf" Version="V1">
+                                                    <uix:NSelectItem.Items>
+                                                      <scg:List x:TypeArguments="x:String" Capacity="6">
+                                                        <x:String>---- 请选择店铺 ----</x:String>
+                                                        <x:String>童装51_MY</x:String>
+                                                        <x:String>童装52_MY</x:String>
+                                                        <x:String>童装53_MY</x:String>
+                                                        <x:String>童装54_MY</x:String>
+                                                        <x:String>童装55_MY</x:String>
+                                                      </scg:List>
+                                                    </uix:NSelectItem.Items>
+                                                    <uix:NSelectItem.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/userTemplate/lazada/edit.htm?id=192432" DesignTimeRectangle="546, 355, 350, 32" ElementType="DropDown" FriendlyName="'童装51_MY'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='SELECT' class='w350' aaname='' /&gt;" Guid="2b8eabe0-3156-4332-a0af-6d1ce91184bb" InformativeScreenshot="49526bdb1a5b98a496dfe7335a18d2a2.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品模板' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive" />
+                                                    </uix:NSelectItem.Target>
+                                                  </uix:NSelectItem>
+                                                  <uix:NClick ClickType="Single" DisplayName="单击 '保存'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="922f9e52-0866-4be0-838d-2c76056117cf" Version="V1">
+                                                    <uix:NClick.Target>
+                                                      <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/userTemplate/lazada/edit.htm?id=192432" DesignTimeRectangle="1432, 189, 56, 36" ElementType="Button" FriendlyName="'保存'" FullSelectorArgument="&lt;webctrl aaname='保存' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' /&gt;" FuzzyMatches="10000" FuzzySelectorArgument="&lt;webctrl aaname='保存' type='button' tag='BUTTON' class='button btn-orange' check:innerText='保存' /&gt;" Guid="c1154611-ba27-49e0-8e72-bde2b081c2a0" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAkCAYAAADckvn+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFaSURBVGhD7ZlNbsIwEEZ7WnY9EJteoKdAQpygUrlA2GaFlKiL6XyuBxz/NAkMasd4pCfw2EZ+Hjss8jIMA9XM8wh+feyI3l6JthvbsANcEsEq5AR2SQVzAw3TBK3TBK3TBK2jK3g8EfX7n89SoD+Z+040ct8xzt+PrmDvFwnBjhcd98sGyNg1MX6mv7cARUFeOLEAvi8RDJGNifMK6Al25+vi1wgeuDLYGMwvBveHc1agJOjvUChYiong3N3jsYjcZi1ERxC7PxYqGFYtrqCrGnPw7RBX2fvkgJIgLyZ3/EAp7wT8xiSCc5Vdjo4gEJFf75IPPBF7iEGEPzueOxd//hTNVcrlGCeRO2peMFtBnjfJ3cbjBKUdVjY5clYF3UPHH6kwj/+7SSUtCkJChMK8tCF/aUeCGCtx452L0RP8pzRB6zRB6zRB6zRB66SCtb98qf71Wa1ULjjQN/J0VRliIGXvAAAAAElFTkSuQmCC" InformativeScreenshot="6611edecffe2c7a6bbf26557f390ada0.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品模板' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                                                    </uix:NClick.Target>
+                                                  </uix:NClick>
+                                                  <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="334,61" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                    <Assign.To>
+                                                      <OutArgument x:TypeArguments="x:String">[store2]</OutArgument>
+                                                    </Assign.To>
+                                                    <Assign.Value>
+                                                      <InArgument x:TypeArguments="x:String">[store1]</InArgument>
+                                                    </Assign.Value>
+                                                  </Assign>
+                                                </Sequence>
+                                              </ActivityAction>
+                                            </uix:NApplicationCard.Body>
+                                            <uix:NApplicationCard.TargetApp>
+                                              <uix:TargetApp Area="-8, -8, 1936, 1056" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARhSURBVHhe7ZpbiE1RGMdnCBGN+yWpSRJRiHjgETVqZB7OXhdnJnmYUqQ8SWjKgxSKEsrtRSiXKCQvrkWUzBgkaTy4lLuUphnG/5vznZl19lnnHGfvzdlzZv3qqzNrfevb3/rvfdb+1jpT4XA4HA6H479SX18/Xmp5UCj5EvZCKLG/rqFhDHeXN4lEYmhq0rLLZy3oG8xu5YunVNIy+W6TUtaxW/niSbnVNvmUiU3sVr7gCVD2ycsu9NWyW/lSU1MzBJNt8U8ed/9RY2PjIHYrb5LJ5CSp5I305PH5Ph6MCdzdPxBarE8L4Gm5l5v7D04AJ0A/EaCpqWmAEGJmQuv5pmHV35UWAJ/PetpbmraEUkswZjqHiB9UzqJqm6K1nprPMInlmGBb70SLNfXcW+0ttsU2DblUI6fhnN4/oxKFiofE7sJ+ZSYaC/sNewAx6ump45yjgTYpuBunfBeMrXlKXqytrR3G6YcHhcoJ24XibMj5DKcfDlqUsi+gWmHHhJSHY2GUi5KPs/IUooanERxc4FxmYLEfX4mB3B0nKiHETjNXfBXOc19wEOi9EfRdnA8t6Mbghr0y8n3PXcFBkM7egOo6N8cWPKEXevOVndwcHCMYTFzm5tgitDxt5szNwTGDOQGcAIUFoFMdpdQsLEhV3BQaKmqo5P2bt09kAqCkXIQdW4MZrJAAntYr4PeJ/X9i0dzAXYGh0haxvnHMD3QN7rLiF4DmgM3XQu7+O6SW2zKC9FhuAXB3JsInnWjafmMCC9ilaGhHiBgdmTHV93zHZ1kCsNFpNLsUBgO++gOkLLcA2NPvs40JU5LinX7EFhMi7GGXLHIJgNy/sEth7AHIcguAZO/Yx8g2dikaTBQlty2muskuWeQWoIj1wDY4ZXkEUKLZPkZ+Y5eiQSn71hKPrIVdsiilAGYF1mP4Cjxkl6LB2Nu2mLjWJXbJomQCYLGrs47RYiO7FA3GrssRU7JLFiUTAFTi4tcy/VVrmIMJ/hXpSWZMeTffiU8pBUidHOGOI4mT9CpdtWbNSO4KDF55Y3Hd3Yh5BTF3rFy7cgR3WSmpAHHACRCRAL7qK219WoAOdikMnP0LD1t4AbBOjKOzfv6zB7xFptAPJvxnYHILIJrZpTBIZh4G3cN7+KMvSCRPAB1b0yIJMSbDqmjDgtiP8HkouwTGIgBtzu5B3LnsUhyZwaIRAAJXI94bI/YPrPbLuDsUfgG4OThmsKgEIHC3R6NO2ICYmxPJxDRuDk2fEeBf4QRwAkQvQLsR8BY3xxa8Ya4a+bZzc3AQxPh9X32n9zh3xQ6t9Sjk+bknXy1fc1dwUAsc7RWge39/g/7NjbtjA27MRNyg62auQsrj3B0cIcRsBDN+Hus2KpWf0WFHHAy5PIX5c/yF3OfwNMKBqm2LL3gfMLGd048GKlgQOMcmKVaGJ6F78pWpzCME5eoMBD9AJz149GifQAtOHIzqfXwNxCH6ynK6DofD4XA48lFR8QdyN++Yg84/rAAAAABJRU5ErkJggg==" InformativeScreenshot="49427b6217c773e0ccf882817f55919f.png" Selector="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品模板' /&gt;" Url="[url_moban]" />
+                                            </uix:NApplicationCard.TargetApp>
+                                          </uix:NApplicationCard>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <Assign DisplayName="分配" sap:VirtualizedContainerService.HintSize="1260,61" sap2010:WorkflowViewState.IdRef="Assign_3">
+                                      <Assign.To>
+                                        <OutArgument x:TypeArguments="x:Int32">[rowno]</OutArgument>
+                                      </Assign.To>
+                                      <Assign.Value>
+                                        <InArgument x:TypeArguments="x:Int32">[Exceldate.Rows.IndexOf(row) + 2]</InArgument>
+                                      </Assign.Value>
+                                    </Assign>
+                                    <ui:WriteCell Cell="[&quot;C&quot;&amp;Row12.ToString]" DisplayName="写入URL" sap:VirtualizedContainerService.HintSize="1260,115" sap2010:WorkflowViewState.IdRef="WriteCell_4" SheetName="Sheet1" Text="[title]" WorkbookPath="[path]" />
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 描述信息" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fbd80e45-e8f8-441d-ae4a-0a752509f2c5" InformativeScreenshot="863e191f0003b58c9fc0e80271b6c426" Selector="&lt;webctrl aaname='描述信息' tag='A' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="获取短描述" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="GetValue_5">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d7fa987-4ba7-46d6-bfa6-0636c0b91489" InformativeScreenshot="8d27e3ff16c3e89b2cebc7040bff2ad3" Selector="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='9' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='IFRAME' /&gt;&lt;webctrl tag='BODY' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+                                      </ui:GetValue.Value>
+                                    </ui:GetValue>
+                                    <ui:WriteCell Cell="[&quot;E&quot;&amp;Row12.ToString]" DisplayName="写入短描述" sap:VirtualizedContainerService.HintSize="1260,115" sap2010:WorkflowViewState.IdRef="WriteCell_5" SheetName="Sheet1" Text="[title]" WorkbookPath="[path]" />
+                                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="发送热键" sap:VirtualizedContainerService.HintSize="1260,138" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="home" KeyModifiers="None" SpecialKey="True">
+                                      <ui:SendHotkey.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="9308932f-0729-44c5-b827-6813d8861542">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:SendHotkey.Target>
+                                    </ui:SendHotkey>
+                                    <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="鼠标滚动-置顶" sap:VirtualizedContainerService.HintSize="1260,217" sap2010:WorkflowViewState.IdRef="NMouseScroll_2" InteractionMode="HardwareEvents" MovementUnits="10" Version="V1">
+                                      <uix:NMouseScroll.SearchedElement>
+                                        <uix:SearchedElement>
+                                          <uix:SearchedElement.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://www.dianxiaomi.com/lazadaProduct/edit.htm?id=34851361646818471#describeInfo" DesignTimeRectangle="1063, 234, 96, 32" ElementType="Button" FriendlyName="'引用产品'" FullSelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;引用产品 &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;引用产品 &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' tag='BUTTON' type='button' class='button btn-orange' check:innerText='引用产品' /&gt;" Guid="c7b09a28-fa7d-4a66-8094-ec760a68b7ec" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAAkCAYAAAB/up84AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHiSURBVGhD7ZtBTsMwEEU5LTsO1A0X4BRIqCdAgguUbVaVglgYT2RHk/Ektls7GcQf6alqYifOf7azaR/GcXTADhBijFnIz/urc89Pzp0ewZ74zCn7RAhkHIjPPhWiNQS7ASHGgBBjQIgxIMQYEGIMCDFGGyGfX04vf5y3u1x9W/Z9tZ8scR3O+cO5b492bubFtwmXWqvsNfahjRAVCqFAyPDG2lAf3+bM2pz8+S0hMWx+3QRlLJwiqfvwt4RQ/6qK9/+PQoaQwaIKhBSVDDOsiov/XBxfW02h/VblhJzlvRhb5yppJCQ88GLboGMFQu7ZsgbeltrJvhFlLJzcCokrczHWQJyIyeS4jUZCNkLjtBBSs2213IY0KY1lEG2E0AxTS4SrCSkqIaQmAG1sMdRkmxXjlXApHWQQbYSoKLNdCknCVfpoK6RWCF8pfFVSqPN4tHsrRClUjWUQHYWIIAlNCP9eImQRYgGthRC1k6KCfkKmrWJLiBZATkhFaJEeQjrSTwg9uHypciEyqImMELVPhmliiLr1HbIDDYVQcLyUh+NCku2KYELofCx1RheCFQLuAUKMASHGgBBjQIgxIMQYEGIMCDEGhBgjFYIfWx+H9mNr/B3hIHzm6t8RgA0gxBSj+wUlguazGu+EyAAAAABJRU5ErkJggg==" InformativeScreenshot="8d27761cf94243eeccb8eee46089e9d4.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品' /&gt;" SearchSteps="FuzzySelector" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="1128, 240, 18, 18" FriendlyName="''" FullSelectorArgument="&lt;webctrl aaname='' idx='3' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='' type='' tag='I' class='attach-icons md-18 icon-right' check:innerText='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVEhL7dBBCoAgEIVhT+udOkPXCG/i2lWLVi+fkQSNOkXSxoF/4+CHaDBZ9GjAuQHnfoLdLJ+z2i5Whv2KNGG578Kxgi/j9RdLuAJlBoiXnbxMXXElygy2BsxOnKNAmQ5mxJUo08MPa//xyzq+WDj8ogHnOsEWO5ZBwjX/HE0iAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:SearchedElement.Target>
+                                          <uix:SearchedElement.Timeout>
+                                            <InArgument x:TypeArguments="x:Double" />
+                                          </uix:SearchedElement.Timeout>
+                                        </uix:SearchedElement>
+                                      </uix:NMouseScroll.SearchedElement>
+                                    </uix:NMouseScroll>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fbd80e45-e8f8-441d-ae4a-0a752509f2c5" InformativeScreenshot="60db188e420781ce47d31454bbd7d917" Selector="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;引用产品 &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' tag='BUTTON' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="65" OffsetY="12" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="fb381711-e559-4173-b389-d662c1554b1d" InformativeScreenshot="92da3d9d6a3b049906353e6273eefe58" Selector="&lt;webctrl aaname='引用产品模板' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="0" OffsetY="0" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5aca5050-f640-4557-81a0-cf2dc9376b78" InformativeScreenshot="60db188e420781ce47d31454bbd7d917" Selector="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;引用产品 &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;' tag='BUTTON' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="15" OffsetY="4" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="eca2d1fe-b81e-417e-b16b-5df4ec21dd25" InformativeScreenshot="829af5a1cc0c7c1718140107367e1987" Selector="&lt;webctrl parentid='productModulePageList' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b84c60a3-00e7-4bd7-93bf-eb7650864864" InformativeScreenshot="becd5af3cee8c5dfab9c5e304b8ca1a9" Selector="&lt;webctrl aaname='产品信息' tag='A' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="获取文本 '获取中文标题'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="GetValue_6">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d7fa987-4ba7-46d6-bfa6-0636c0b91489" InformativeScreenshot="573bd36860bb76d4a46baf72b7136f12" Selector="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' tag='TABLE' /&gt;&lt;webctrl id='titleId' tableRow='1' tag='INPUT' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+                                      </ui:GetValue.Value>
+                                    </ui:GetValue>
+                                    <ui:WriteCell Cell="[&quot;D&quot;&amp;Row12.ToString]" DisplayName="写入单元格" sap:VirtualizedContainerService.HintSize="1260,115" sap2010:WorkflowViewState.IdRef="WriteCell_6" SheetName="Sheet1" Text="[title]" WorkbookPath="[path]" />
+                                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="操作 输入信息 'INPUT  titleId'" EmptyField="False" sap:VirtualizedContainerService.HintSize="1260,134" sap2010:WorkflowViewState.IdRef="TypeInto_3" SendWindowMessages="False" SimulateType="True" Text="[row(0).ToString]">
+                                      <ui:TypeInto.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="377217dc-4232-49b3-bfb7-d22efbca127f" InformativeScreenshot="573bd36860bb76d4a46baf72b7136f12" Selector="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' tag='TABLE' /&gt;&lt;webctrl id='titleId' tableRow='1' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:TypeInto.Target>
+                                    </ui:TypeInto>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_35" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3c5ee4f3-2fa3-4476-ae18-fbb19eb0ddcd" InformativeScreenshot="d710235b663ec2b2f066271b346f0e52" Selector="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="50" OffsetY="10" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cf98283b-3188-44a4-a719-ffcb0c7fbdb2" InformativeScreenshot="c301610a1d0e439a3cbc9c4412ded4db" Selector="&lt;webctrl aaname='变种信息' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="选中 'INPUT  autoAllocateStock'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Check_3">
+                                      <ui:Check.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5d35f4f6-51d1-4c93-a0f4-a4e6bc4511cd" InformativeScreenshot="f24a1ef35c091d275b162349b3795f8f" Selector="&lt;webctrl id='autoAllocateStock' tag='INPUT' type='checkbox' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Check.Target>
+                                    </ui:Check>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="32" OffsetY="8" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="86a4bb60-1d1b-463e-bd97-3604b73d9ccf" InformativeScreenshot="5af186f5d882ceb7087a031bd73e87b9" Selector="&lt;webctrl parentid='lzdSkuAdd' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="输入信息 'INPUT'" EmptyField="False" sap:VirtualizedContainerService.HintSize="1260,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="True" Text="[row(1).ToString]">
+                                      <ui:TypeInto.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f50e39a6-77ad-4734-b73b-109c67d64e98" InformativeScreenshot="9eaafa4ea7d6b327d7a09558db16f0f7" Selector="&lt;webctrl parentid='skuListBatchEdit' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:TypeInto.Target>
+                                    </ui:TypeInto>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="31" OffsetY="14" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="18b10ed0-9bbe-4e01-a228-4271b499f967" InformativeScreenshot="af50c1e1a3f88af1e9a86e2dc345ac12" Selector="&lt;webctrl aaname='确定' parentid='skuListBatchEdit' tag='BUTTON' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_27" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="52" OffsetY="10" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b6379d3e-1068-4403-bcad-3fbff552da46" InformativeScreenshot="5eb7d85d92458f6eced5f68206d07bea" Selector="&lt;webctrl aaname='描述信息' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="操作 单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_28" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="50" OffsetY="6" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b6cef0b-3cde-43fc-93c4-92ad20056923" InformativeScreenshot="6baccf7d3e64bff90b6885de9cf68fbf" Selector="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' idx='9' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="获取文本 'LI'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="GetValue_7">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="63f16719-8c4f-4a06-b5a5-59a7936e240f" InformativeScreenshot="56c8fe1e1bf04274d349cc80d39c01a7" Selector="&lt;webctrl name='sizeItem' tag='LI' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:String">[wenben1]</OutArgument>
+                                      </ui:GetValue.Value>
+                                    </ui:GetValue>
+                                    <ui:LogMessage DisplayName="日志消息" sap:VirtualizedContainerService.HintSize="1260,95" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[wenben1]" />
+                                    <ui:GetValue ContinueOnError="{x:Null}" DisplayName="获取文本 'LI'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="GetValue_8">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="16e3b51b-85fa-4bd4-bf3c-fc7790f439ba" InformativeScreenshot="48cb5dfed88ca2e2259cea596e9e4aa1" Selector="&lt;webctrl name='errorItem' tag='LI' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:String">[wenben2]</OutArgument>
+                                      </ui:GetValue.Value>
+                                    </ui:GetValue>
+                                    <ui:LogMessage DisplayName="日志消息" sap:VirtualizedContainerService.HintSize="1260,95" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[wenben2]" />
+                                    <If Condition="[wenben1=&quot;图片尺寸违规（0）&quot; or wenben2 =&quot;图片链接失效（0）&quot;]" DisplayName="IF 条件" sap:VirtualizedContainerService.HintSize="1260,1531" sap2010:WorkflowViewState.IdRef="If_4">
+                                      <If.Then>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="839,895" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <If Condition="[wenben1=&quot;图片尺寸违规（0）&quot; And wenben2 =&quot;图片链接失效（0）&quot;]" DisplayName="IF 条件" sap:VirtualizedContainerService.HintSize="797,801" sap2010:WorkflowViewState.IdRef="If_5">
+                                            <sap:WorkflowViewStateService.ViewState>
+                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              </scg:Dictionary>
+                                            </sap:WorkflowViewStateService.ViewState>
+                                            <If.Then>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="376,200" sap2010:WorkflowViewState.IdRef="Sequence_27">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_40" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="98fe8b1b-bf52-4650-8a18-d196fcc3286d" InformativeScreenshot="f29176dd7000cc2f035560b971c2c7fe" Selector="&lt;webctrl aaname='关闭' parentid='imgTestingModal' tag='BUTTON' type='button' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                              </Sequence>
+                                            </If.Then>
+                                            <If.Else>
+                                              <Sequence sap:VirtualizedContainerService.HintSize="376,638" sap2010:WorkflowViewState.IdRef="Sequence_28">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Action="Check" DelayAfter="2000" DisplayName="选中 'INPUT  testingAll'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Check_6">
+                                                  <ui:Check.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b47f1f5-42f4-466e-b0bc-7fc6ad787ba8" InformativeScreenshot="625098304a14112dbf09f32202d17751" Selector="&lt;webctrl id='testingAll' tag='INPUT' type='checkbox' /&gt;" WaitForReady="COMPLETE">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                    </ui:Target>
+                                                  </ui:Check.Target>
+                                                </ui:Check>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition OffsetX="37" OffsetY="3" Position="TopLeft" />
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28aca54f-1212-42d1-a6f9-a02918a71015" InformativeScreenshot="8a815e0c70f10f2dafe8672d33726884" Selector="&lt;webctrl parentid='imgTestingModal' tag='A' type='button' /&gt;" WaitForReady="COMPLETE">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_42" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition OffsetX="45" OffsetY="14" Position="TopLeft" />
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c520bb0f-18e3-4a07-87c3-5d87f62ce2a1" InformativeScreenshot="69d7c25a35206605fd3e2290ad99db2d" Selector="&lt;webctrl aaname='删除图片' aria-role='menuitem' parentid='imgTestingModal' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                                <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_43" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click.CursorPosition>
+                                                    <ui:CursorPosition Position="Center">
+                                                      <ui:CursorPosition.OffsetX>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetX>
+                                                      <ui:CursorPosition.OffsetY>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:CursorPosition.OffsetY>
+                                                    </ui:CursorPosition>
+                                                  </ui:Click.CursorPosition>
+                                                  <ui:Click.Target>
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="62d30732-e274-4b5e-98b8-449f08c156d4" InformativeScreenshot="22f9046dc24ec7a743385280bf0539a8" Selector="&lt;webctrl aaname='确定' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' type='button' /&gt;">
+                                                      <ui:Target.TimeoutMS>
+                                                        <InArgument x:TypeArguments="x:Int32" />
+                                                      </ui:Target.TimeoutMS>
+                                                      <ui:Target.WaitForReady>
+                                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                      </ui:Target.WaitForReady>
+                                                    </ui:Target>
+                                                  </ui:Click.Target>
+                                                </ui:Click>
+                                              </Sequence>
+                                            </If.Else>
+                                          </If>
+                                        </Sequence>
+                                      </If.Then>
+                                      <If.Else>
+                                        <Sequence sap:VirtualizedContainerService.HintSize="376,1368" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                          <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Action="Check" DelayAfter="2000" DisplayName="选中 'INPUT  testingAll'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Check_5">
+                                            <ui:Check.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b47f1f5-42f4-466e-b0bc-7fc6ad787ba8" InformativeScreenshot="625098304a14112dbf09f32202d17751" Selector="&lt;webctrl id='testingAll' tag='INPUT' type='checkbox' /&gt;" WaitForReady="COMPLETE">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                              </ui:Target>
+                                            </ui:Check.Target>
+                                          </ui:Check>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition OffsetX="37" OffsetY="3" Position="TopLeft" />
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28aca54f-1212-42d1-a6f9-a02918a71015" InformativeScreenshot="8a815e0c70f10f2dafe8672d33726884" Selector="&lt;webctrl parentid='imgTestingModal' tag='A' type='button' /&gt;" WaitForReady="COMPLETE">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition OffsetX="45" OffsetY="14" Position="TopLeft" />
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c520bb0f-18e3-4a07-87c3-5d87f62ce2a1" InformativeScreenshot="69d7c25a35206605fd3e2290ad99db2d" Selector="&lt;webctrl aaname='删除图片' aria-role='menuitem' parentid='imgTestingModal' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_39" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="62d30732-e274-4b5e-98b8-449f08c156d4" InformativeScreenshot="22f9046dc24ec7a743385280bf0539a8" Selector="&lt;webctrl aaname='确定' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' type='button' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'LI'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a53550f5-a6b6-498d-b34b-7a72ac008cb4" InformativeScreenshot="3606286002ea32e8d223546c10fc5083" Selector="&lt;webctrl name='errorItem' tag='LI' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" Action="Check" DelayAfter="2000" DisplayName="选中 'INPUT  testingAll'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Check_7">
+                                            <ui:Check.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2b47f1f5-42f4-466e-b0bc-7fc6ad787ba8" InformativeScreenshot="625098304a14112dbf09f32202d17751" Selector="&lt;webctrl id='testingAll' tag='INPUT' type='checkbox' /&gt;" WaitForReady="COMPLETE">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                              </ui:Target>
+                                            </ui:Check.Target>
+                                          </ui:Check>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition OffsetX="37" OffsetY="3" Position="TopLeft" />
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="28aca54f-1212-42d1-a6f9-a02918a71015" InformativeScreenshot="8a815e0c70f10f2dafe8672d33726884" Selector="&lt;webctrl parentid='imgTestingModal' tag='A' type='button' /&gt;" WaitForReady="COMPLETE">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'A  javascript:'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_46" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition OffsetX="45" OffsetY="14" Position="TopLeft" />
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c520bb0f-18e3-4a07-87c3-5d87f62ce2a1" InformativeScreenshot="69d7c25a35206605fd3e2290ad99db2d" Selector="&lt;webctrl aaname='删除图片' aria-role='menuitem' parentid='imgTestingModal' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click.CursorPosition>
+                                              <ui:CursorPosition Position="Center">
+                                                <ui:CursorPosition.OffsetX>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetX>
+                                                <ui:CursorPosition.OffsetY>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:CursorPosition.OffsetY>
+                                              </ui:CursorPosition>
+                                            </ui:Click.CursorPosition>
+                                            <ui:Click.Target>
+                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="62d30732-e274-4b5e-98b8-449f08c156d4" InformativeScreenshot="22f9046dc24ec7a743385280bf0539a8" Selector="&lt;webctrl aaname='确定' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;button' tag='BUTTON' type='button' /&gt;">
+                                                <ui:Target.TimeoutMS>
+                                                  <InArgument x:TypeArguments="x:Int32" />
+                                                </ui:Target.TimeoutMS>
+                                                <ui:Target.WaitForReady>
+                                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                </ui:Target.WaitForReady>
+                                              </ui:Target>
+                                            </ui:Click.Target>
+                                          </ui:Click>
+                                        </Sequence>
+                                      </If.Else>
+                                    </If>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_32" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="23" OffsetY="18" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7d159983-2659-471c-b9cd-f1b12841a512" InformativeScreenshot="9018bd3bd1681dba1d05add5330bba37" Selector="&lt;webctrl parentid='imgTestingModal' tag='BUTTON' type='button' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="操作 单击 'DIV'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="13" OffsetY="20" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39a25e89-2b2d-43b1-b8d3-fd3ef36436a1" InformativeScreenshot="8135b5406d9ad41498b36ddb7379c8fd" Selector="&lt;webctrl css-selector='body&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='2' isleaf='1' tag='DIV' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="发送热键" sap:VirtualizedContainerService.HintSize="1260,138" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="home" KeyModifiers="None" SpecialKey="True">
+                                      <ui:SendHotkey.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8e80fab5-8a6e-42e5-bd2e-0eee05d920a5">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:SendHotkey.Target>
+                                    </ui:SendHotkey>
+                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="单击 'BUTTON'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_34" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                                      <ui:Click.CursorPosition>
+                                        <ui:CursorPosition OffsetX="43" OffsetY="15" Position="TopLeft" />
+                                      </ui:Click.CursorPosition>
+                                      <ui:Click.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b0fea5c8-3605-4beb-8e46-47ebef1b6478" InformativeScreenshot="3007a1e0728d9dffc1b035b4848e3adb" Selector="&lt;webctrl aaname='　保存　' tag='BUTTON' /&gt;" WaitForReady="COMPLETE">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                        </ui:Target>
+                                      </ui:Click.Target>
+                                    </ui:Click>
+                                    <ui:CloseTab Browser="[url_bjym]" DisplayName="关闭选项卡" sap:VirtualizedContainerService.HintSize="1260,22" sap2010:WorkflowViewState.IdRef="CloseTab_2" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARhSURBVHhe7ZpbiE1RGMdnCBGN+yWpSRJRiHjgETVqZB7OXhdnJnmYUqQ8SWjKgxSKEsrtRSiXKCQvrkWUzBgkaTy4lLuUphnG/5vznZl19lnnHGfvzdlzZv3qqzNrfevb3/rvfdb+1jpT4XA4HA6H479SX18/Xmp5UCj5EvZCKLG/rqFhDHeXN4lEYmhq0rLLZy3oG8xu5YunVNIy+W6TUtaxW/niSbnVNvmUiU3sVr7gCVD2ycsu9NWyW/lSU1MzBJNt8U8ed/9RY2PjIHYrb5LJ5CSp5I305PH5Ph6MCdzdPxBarE8L4Gm5l5v7D04AJ0A/EaCpqWmAEGJmQuv5pmHV35UWAJ/PetpbmraEUkswZjqHiB9UzqJqm6K1nprPMInlmGBb70SLNfXcW+0ttsU2DblUI6fhnN4/oxKFiofE7sJ+ZSYaC/sNewAx6ump45yjgTYpuBunfBeMrXlKXqytrR3G6YcHhcoJ24XibMj5DKcfDlqUsi+gWmHHhJSHY2GUi5KPs/IUooanERxc4FxmYLEfX4mB3B0nKiHETjNXfBXOc19wEOi9EfRdnA8t6Mbghr0y8n3PXcFBkM7egOo6N8cWPKEXevOVndwcHCMYTFzm5tgitDxt5szNwTGDOQGcAIUFoFMdpdQsLEhV3BQaKmqo5P2bt09kAqCkXIQdW4MZrJAAntYr4PeJ/X9i0dzAXYGh0haxvnHMD3QN7rLiF4DmgM3XQu7+O6SW2zKC9FhuAXB3JsInnWjafmMCC9ilaGhHiBgdmTHV93zHZ1kCsNFpNLsUBgO++gOkLLcA2NPvs40JU5LinX7EFhMi7GGXLHIJgNy/sEth7AHIcguAZO/Yx8g2dikaTBQlty2muskuWeQWoIj1wDY4ZXkEUKLZPkZ+Y5eiQSn71hKPrIVdsiilAGYF1mP4Cjxkl6LB2Nu2mLjWJXbJomQCYLGrs47RYiO7FA3GrssRU7JLFiUTAFTi4tcy/VVrmIMJ/hXpSWZMeTffiU8pBUidHOGOI4mT9CpdtWbNSO4KDF55Y3Hd3Yh5BTF3rFy7cgR3WSmpAHHACRCRAL7qK219WoAOdikMnP0LD1t4AbBOjKOzfv6zB7xFptAPJvxnYHILIJrZpTBIZh4G3cN7+KMvSCRPAB1b0yIJMSbDqmjDgtiP8HkouwTGIgBtzu5B3LnsUhyZwaIRAAJXI94bI/YPrPbLuDsUfgG4OThmsKgEIHC3R6NO2ICYmxPJxDRuDk2fEeBf4QRwAkQvQLsR8BY3xxa8Ya4a+bZzc3AQxPh9X32n9zh3xQ6t9Sjk+bknXy1fc1dwUAsc7RWge39/g/7NjbtjA27MRNyg62auQsrj3B0cIcRsBDN+Hus2KpWf0WFHHAy5PIX5c/yF3OfwNMKBqm2LL3gfMLGd048GKlgQOMcmKVaGJ6F78pWpzCME5eoMBD9AJz149GifQAtOHIzqfXwNxCH6ynK6DofD4XA48lFR8QdyN++Yg84/rAAAAABJRU5ErkJggg==" InformativeScreenshot="1d5dcc0d046bea6e23dd07eca2a0115b.png" Selector="&lt;html app='msedge.exe' title='店小秘--编辑Lazada产品' /&gt;" Url="https://www.dianxiaomi.com/lazadaProduct/edit.htm?id=34851361645405821" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARhSURBVHhe7ZpbiE1RGMdnCBGN+yWpSRJRiHjgETVqZB7OXhdnJnmYUqQ8SWjKgxSKEsrtRSiXKCQvrkWUzBgkaTy4lLuUphnG/5vznZl19lnnHGfvzdlzZv3qqzNrfevb3/rvfdb+1jpT4XA4HA6H479SX18/Xmp5UCj5EvZCKLG/rqFhDHeXN4lEYmhq0rLLZy3oG8xu5YunVNIy+W6TUtaxW/niSbnVNvmUiU3sVr7gCVD2ycsu9NWyW/lSU1MzBJNt8U8ed/9RY2PjIHYrb5LJ5CSp5I305PH5Ph6MCdzdPxBarE8L4Gm5l5v7D04AJ0A/EaCpqWmAEGJmQuv5pmHV35UWAJ/PetpbmraEUkswZjqHiB9UzqJqm6K1nprPMInlmGBb70SLNfXcW+0ttsU2DblUI6fhnN4/oxKFiofE7sJ+ZSYaC/sNewAx6ump45yjgTYpuBunfBeMrXlKXqytrR3G6YcHhcoJ24XibMj5DKcfDlqUsi+gWmHHhJSHY2GUi5KPs/IUooanERxc4FxmYLEfX4mB3B0nKiHETjNXfBXOc19wEOi9EfRdnA8t6Mbghr0y8n3PXcFBkM7egOo6N8cWPKEXevOVndwcHCMYTFzm5tgitDxt5szNwTGDOQGcAIUFoFMdpdQsLEhV3BQaKmqo5P2bt09kAqCkXIQdW4MZrJAAntYr4PeJ/X9i0dzAXYGh0haxvnHMD3QN7rLiF4DmgM3XQu7+O6SW2zKC9FhuAXB3JsInnWjafmMCC9ilaGhHiBgdmTHV93zHZ1kCsNFpNLsUBgO++gOkLLcA2NPvs40JU5LinX7EFhMi7GGXLHIJgNy/sEth7AHIcguAZO/Yx8g2dikaTBQlty2muskuWeQWoIj1wDY4ZXkEUKLZPkZ+Y5eiQSn71hKPrIVdsiilAGYF1mP4Cjxkl6LB2Nu2mLjWJXbJomQCYLGrs47RYiO7FA3GrssRU7JLFiUTAFTi4tcy/VVrmIMJ/hXpSWZMeTffiU8pBUidHOGOI4mT9CpdtWbNSO4KDF55Y3Hd3Yh5BTF3rFy7cgR3WSmpAHHACRCRAL7qK219WoAOdikMnP0LD1t4AbBOjKOzfv6zB7xFptAPJvxnYHILIJrZpTBIZh4G3cN7+KMvSCRPAB1b0yIJMSbDqmjDgtiP8HkouwTGIgBtzu5B3LnsUhyZwaIRAAJXI94bI/YPrPbLuDsUfgG4OThmsKgEIHC3R6NO2ICYmxPJxDRuDk2fEeBf4QRwAkQvQLsR8BY3xxa8Ya4a+bZzc3AQxPh9X32n9zh3xQ6t9Sjk+bknXy1fc1dwUAsc7RWge39/g/7NjbtjA27MRNyg62auQsrj3B0cIcRsBDN+Hus2KpWf0WFHHAy5PIX5c/yF3OfwNMKBqm2LL3gfMLGd048GKlgQOMcmKVaGJ6F78pWpzCME5eoMBD9AJz149GifQAtOHIzqfXwNxCH6ynK6DofD4XA48lFR8QdyN++Yg84/rAAAAABJRU5ErkJggg==" InformativeScreenshot="65f91567b43b3c7cb8fe2699c420ef86.png" Selector="&lt;html app='msedge.exe' htmlwindowname='__bid_n=1842e03936039a36974207' title='店小秘--免费的跨境电商ERP' /&gt;" Url="https://www.dianxiaomi.com/index.htm" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEachRow.Body>
+    </ui:ForEachRow>
+  </Sequence>
+</Activity>
